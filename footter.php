@@ -5,7 +5,7 @@
 	<div><a href="buyer signup/login/loginindex.php">Sign in</a></div>
 </div>
 <footer>
-<link rel="stylesheet" href="stylp.css">
+<link rel="stylesheet" href="styl9.css">
 
 <div class="container1">
   	 	<div class="row1">
@@ -19,7 +19,7 @@
   	 				<li class="p"><a href="seller signup/loginindex.php">seller signin</a></li>
   	 				<li class="p"><a href="#">authors</a></li>
   	 				<li class="p"><a href="#">trust & safety</a></li>
-					   <li class="p"><a href="affiliate/index.php">Affiliate Marketing</a></li>
+					<li class="p"><a href="affiliate/index.php">Affiliate Marketing</a></li>
   	 			</ul>
   	 		</div>
   	 		<div class="footer-col">

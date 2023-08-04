@@ -8,7 +8,7 @@ session_start();
     <title>Document</title>
 </head>
 
-<link rel="stylesheet" href="css/styl8.css">
+<link rel="stylesheet" href="css/styl9.css">
 <link rel="stylesheet" href="css/mobb2.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <?php
@@ -43,76 +43,10 @@ $conn = mysqli_connect($sname, $unmae, $password, $db_name);
       $result = $conn->query($sql);    
   ?>    
 <style>
-         
-        .mos {
-            width: 100%;
-            height: 100vh;
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .cos {
-            position: relative;
-        }
-
-        .cos::before {
-            position: absolute;
-            content: attr(data-item);
-            width: 30px;
-            height: 30px;
-            background-color: #ff3300;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 100%;
-            color: #fff;
-            right: 22%;
-            top: 4px;
-            z-index: -1;
-            transition: 0.2s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .cos:hover:before {
-            transform: scale(1.2);
-            top: -1px;
-            z-index: 0;
-        }
-
-        .cos svg {
-            width: 80px;
-            height: 80px;
-        }
-
-        .cos svg path {
-            fill: #292929;
-        }
-.fofo {
-  display: flex;
-  width: 500px;
-}
-
-.coco{
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width:100%;
-}
-
-.popo{
-  padding: 8px 16px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+   
 </style>
 <div class="header">
-  <div class="iconmain"> <img src="image/website/log.png" style="width:150px"></div>
+  <div class="iconmain"> <img src="image/website/log.png" style="width:200px"></div>
 
 </div>
 
@@ -137,8 +71,8 @@ $conn = mysqli_connect($sname, $unmae, $password, $db_name);
 </div>
  <div >
   <form class="fofo" action="search.php" method="POST">
-        <input class="coco" type="text" name="search" placeholder="Search">
-        <button class="popo" type="submit" name="submit-search">Search</button>
+        <input class="coco" type="text" name="search" placeholder="Search . . .">
+        <button class="popo" type="submit" name="submit-search"><img src="image/website/search.png" style="width:15px"></button>
     </form>
 </div>
           <div style="display:flex">

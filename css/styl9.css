@@ -116,7 +116,7 @@ input[type=file]::file-selector-button:hover {
 
   body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
   }
 
   .mainn{
@@ -255,13 +255,14 @@ input[type=file]::file-selector-button:hover {
     margin-bottom: 5px;
   }
   
-  input[type="text"],
+  /* input[type="text"],
   input[type="password"] {
     width: 100%;
     padding: 10px;
+
     border: 1px solid #ccc;
     border-radius: 3px;
-  }
+  } */
   
   .but {
     display: block;
@@ -291,18 +292,93 @@ input[type=file]::file-selector-button:hover {
   .iconmain{
     width: 150px;
   }
+        
+  .mos {
+    width: 100%;
+    height: 100vh;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cos {
+    position: relative;
+}
+
+.cos::before {
+    position: absolute;
+    content: attr(data-item);
+    width: 30px;
+    height: 30px;
+    background-color: #ff3300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 100%;
+    color: #fff;
+    right: 22%;
+    top: 4px;
+    z-index: -1;
+    transition: 0.2s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cos:hover:before {
+    transform: scale(1.2);
+    top: -1px;
+    z-index: 0;
+}
+
+.cos svg {
+    width: 80px;
+    height: 80px;
+}
+
+.cos svg path {
+    fill: #292929;
+}
+.fofo {
+display: flex;
+width: 500px;
+}
+
+.coco{
+padding: 1px 5px;
+border: 1px solid #640000;
+width:100%;
+}
+
+.popo{
+padding: 5px 10px;
+background-color: #9c0000;
+color: white;
+border: none;
+cursor: pointer;
+}
   .cardi{
     display: block;
     height: 300px;
     width: 200px;
     background-color:white;
-    border: 2px solid rgba(179, 175, 175, 0.352);
+    border: 1px solid #000000;
     border-radius: 2px;
     margin: 3px;
     
   }
+  .f .q{
+    color: #ffffff;
+    font-size: 13px;
+
+  }
+  .f .p a{
+    color: #ffffff;
+    font-size: 12px;
+
+  }
   .cardi:hover {
-    border: 1px solid #777;
+    border: 1px solid #9c0000;
     transition: .5s ease;}
    .title{
       padding: 3px 0px 0px 3px ;
@@ -318,7 +394,7 @@ input[type=file]::file-selector-button:hover {
         font-size: 16px;
         font-weight: bold;
         padding: 0px 3px;
-        color: #23f8bc;
+        color: #9c0000;
 
   }
 .header{
@@ -437,7 +513,7 @@ input[type=file]::file-selector-button:hover {
       text-align: center;
       padding:6px 6px;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 15px;
     }
     
     /* Change the color of links on hover */
@@ -448,7 +524,7 @@ input[type=file]::file-selector-button:hover {
     
     /* Style the "active" element to highlight the current page */
     .topnav a.active {
-      background-color: #23f8bc;
+      background-color: #9c0000;
       color: white;
     }
     
@@ -595,7 +671,7 @@ grid-template-columns: 80% 20%;
   a{text-decoration: none;}
   footer {
       /* float: initial; */
-      background-color: #23f8bc;
+      background-color: #000000;
       padding: 15px 0;
       bottom: 0px;
       display: block;
@@ -616,7 +692,7 @@ grid-template-columns: 80% 20%;
 }
 .mobfooter {
   display: none;
-  background-color: #083eff;
+  background-color: #492e2e;
   position: sticky;
   height: 37px;
   margin-bottom: 5px;
