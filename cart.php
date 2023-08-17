@@ -5,6 +5,7 @@
   $page_title="Cart";
 
   include 'header.php';
+//   echo $_SESSION['user_name'];
 
   $action = isset($_GET['action']) ? $_GET['action'] : "";
 

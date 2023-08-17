@@ -30,9 +30,9 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
 if (!empty($_POST['id'])) {
     $id = $_POST['id'];
 } else {
-    $id = $_SESSION['id'];
+    $id = $_SESSION['pid'];
 }
-  $_SESSION["id"] = $id;
+  $_SESSION["pid"] = $id;
 
 
 

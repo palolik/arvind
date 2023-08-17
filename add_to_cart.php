@@ -1,5 +1,5 @@
 <?php
-
+include 'header.php';
 
 // parameters from the add to cart button
 $product_id = isset($_GET['id']) ? $_GET['id'] : "" ;
@@ -9,10 +9,10 @@ $quantity = isset($_GET['quantity']) ? $_GET['quantity'] : 1;
 $quantity=$quantity<=0 ? 1 : $quantity;
 
 // connect to database
-include 'config/database.php';
+// include 'config/database.php';
 
 // include object
-include_once "objects/cart_item.php";
+// include_once "objects/cart_item.php";
 
 // get database connection
 $database = new Database();
@@ -34,13 +34,16 @@ echo $cart_item->quantity;
 if($cart_item->exists()){
     // redirect to product list and tell the user it was added to cart
     header("Location: cart.php?action=exists");
+    // echo "exist";
 }else{
     // add to cart
     if($cart_item->create()){
         // redirect to product list and tell the user it was added to cart
         header("Location: index.php?id={$product_id}&action=added");
+        // echo "added";
     }else{
         header("Location: index.php?id={$product_id}&action=unable_to_add");
+        // echo "unable to added";
     }
 } 
 ?>

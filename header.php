@@ -1,5 +1,7 @@
 <?php 
 session_start(); 
+// session_unset();
+// session_destroy();
 
 ?>
 <head>
@@ -23,11 +25,11 @@ session_start();
   $conn = mysqli_connect($sname, $unmae, $password, $db_name);
   
   
-  $user_name=$_SESSION['user_name'];
+  $user_name= isset($_SESSION['user_name']) ? $_SESSION['user_name'] : null ;
           
-  $idd	=$_SESSION['id']; 
+  $idd	= isset($_SESSION['id']) ? $_SESSION['id'] : null; 
 
-$conn = mysqli_connect($sname, $unmae, $password, $db_name);
+  $conn = mysqli_connect($sname, $unmae, $password, $db_name);
 
  
       include 'config/database.php';
@@ -77,10 +79,20 @@ $conn = mysqli_connect($sname, $unmae, $password, $db_name);
 </div>
           <div style="display:flex">
               <div>
-              <?php while($row = $result->fetch_assoc()) {
- echo "<a href = 'buyer signup/home.php'>ID :". $row["id"] . "  USERNAME: " . $row["user_name"]."</a>"; }?>
-
+                <?php
+                // print_r( $result->num_rows);
+                if ($result->num_rows > 0) 
+                {
+                  while($row = $result->fetch_assoc()) 
+                  { ?>
+                    ID : <?= $row["id"] ?>  USERNAME: <?= $row["user_name"]?>
+                  <?php }
+                }
+                else { ?>
                   <a href="./buyer signup/loginindex.php">Sign In</a>
+                  
+                <?php } ?>
+
               </div>
               <div>
                   <a href="cart.php">
