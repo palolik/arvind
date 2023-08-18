@@ -5,7 +5,7 @@
 	<div><a href="buyer signup/login/loginindex.php">Sign in</a></div>
 </div>
 <footer>
-<link rel="stylesheet" href="styl10.css">
+<link rel="stylesheet" href="styl11.css">
 
 <div class="container1">
   	 	<div class="row1">

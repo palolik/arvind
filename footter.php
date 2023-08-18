@@ -1,13 +1,14 @@
 
 <div class="mobfooter">
-	<div><a href="index.php">Home</a></div>
-	<div>Catagories</div>
-	<div>Cart</div>
+	<div><a href="index.php"><img class="ic" src="./image/icons/home.png"></a></div>
+	<div><img class="ic" src="./image/icons/cat.png"></div>
+	<div><a href="index.php"><img class="ic" src="./image/icons/cart.png"></a>
+</div>
 
-	<div><a href="buyer signup/loginindex.php">Sign in</a></div>
+	<div><a href="buyer signup/loginindex.php"><img class="ic" src="./image/icons/pro.png"></a></div>
 </div>
 <footer>
-<link rel="stylesheet" href="styl10.css">
+<link rel="stylesheet" href="styl11.css">
 
 <div class="container1">
   	 	<div class="row1">

@@ -6,7 +6,13 @@
     display: flex;
     flex-direction: column;
 }
-
+.ic{
+  width: 15px;
+  margin-left: 3px;
+}
+.stars{
+  margin-bottom: 10px;
+}
 .pompom {
     height: 350px;
     width: 350px;
@@ -255,21 +261,20 @@ input[type=file]::file-selector-button:hover {
     margin-bottom: 5px;
   }
   
-  /* input[type="text"],
-  input[type="password"] {
+ .lals {
     width: 100%;
     padding: 10px;
 
     border: 1px solid #ccc;
     border-radius: 3px;
-  } */
+  }
   
   .but {
     display: block;
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    background-color: #23f8bc;
+    background-color: #9c0000;
     ;
     color: #fff;
     border: none;
@@ -279,9 +284,7 @@ input[type=file]::file-selector-button:hover {
   
 
 
-  body {
-  background-color: rgb(243, 255, 246);
-    }
+
   .prorow{
     display: flex;
     align-items: center;
@@ -362,7 +365,7 @@ cursor: pointer;
     height: 300px;
     width: 200px;
     background-color:white;
-    border: 1px solid #000000;
+    border: 1px solid #dadada;
     border-radius: 2px;
     margin: 3px;
     
@@ -419,7 +422,8 @@ cursor: pointer;
   flex-direction: column;
   justify-content:flex-start;
   flex-wrap: nowrap;
-  height:75px ;
+  min-height:35px ;
+  max-height:55px ;
 }
   .image {
     opacity: 1;
@@ -433,7 +437,7 @@ cursor: pointer;
     border: none;
     height: 200px;
     width: 200px;
-    color: #000; /* Set the color of the button text */
+    color: #ffffff; /* Set the color of the button text */
     cursor: pointer;
     outline: none;}
     .middle {
