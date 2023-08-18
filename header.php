@@ -8,10 +8,12 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="image/icons/favicon.ico">
+
 </head>
 
-<link rel="stylesheet" href="css/styl11.css">
-<link rel="stylesheet" href="css/mobb4.css">
+<link rel="stylesheet" href="css/styl12.css">
+<link rel="stylesheet" href="css/mobb5.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <?php
 

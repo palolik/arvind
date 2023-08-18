@@ -3,7 +3,9 @@
 <html>
 <head>
   <title>Sign In</title>
-  <link rel="stylesheet" href="../css/styl11.css">
+  <link rel="stylesheet" href="../css/styl12.css">
+  <link rel="stylesheet" href="../css/mobb5.css">
+
   <style>
   </style>
 </head>
@@ -27,11 +29,11 @@
      	<?php } ?>
       <div class="fits">
         <label class="lal" for="username">Username:</label>
-        <input  type="text" id="username" name="uname" required>
+        <input class="lals" type="text" id="username" name="uname" required>
       </div>
       <div class="fits">
         <label class="lal" for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <input class="lals" type="password" id="password" name="password" required>
       </div>
       <button class="but" type="submit">Sign In</button>
     </form>

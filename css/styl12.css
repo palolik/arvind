@@ -648,6 +648,7 @@ grid-template-columns: 80% 20%;
     .container1 {
       max-width: 1170px;
       margin: auto;
+      
      
   }
   .row1 {
@@ -677,8 +678,10 @@ grid-template-columns: 80% 20%;
       /* float: initial; */
       background-color: #000000;
       padding: 15px 0;
-      bottom: 0px;
       display: block;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
   }
   .col1{
     text-align: center;
