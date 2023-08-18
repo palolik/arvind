@@ -10,8 +10,8 @@ session_start();
     <title>Document</title>
 </head>
 
-<link rel="stylesheet" href="css/styl9.css">
-<link rel="stylesheet" href="css/mobb2.css">
+<link rel="stylesheet" href="css/styl10.css">
+<link rel="stylesheet" href="css/mobb3.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <?php
 
@@ -54,8 +54,12 @@ session_start();
 
 
 <div class="searchbar">
-<input type="text" placeholder="Search..">
-  </div>
+<form  action="search.php" method="POST">
+        <input class="coco" type="text" name="search" placeholder="Search . . .">
+        <button class="popo" type="submit" name="submit-search"><img src="image/website/search.png" style="width:15px"></button>
+    </form>
+
+</div>
 <div class="topnav"><div>
   <a class="active" href="index.php">Home</a>
   <div class="dropdown">

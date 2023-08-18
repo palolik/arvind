@@ -2,10 +2,12 @@
 <div class="mobfooter">
 	<div><a href="index.php">Home</a></div>
 	<div>Catagories</div>
-	<div><a href="buyer signup/login/loginindex.php">Sign in</a></div>
+	<div>Cart</div>
+
+	<div><a href="buyer signup/loginindex.php">Sign in</a></div>
 </div>
 <footer>
-<link rel="stylesheet" href="styl9.css">
+<link rel="stylesheet" href="styl10.css">
 
 <div class="container1">
   	 	<div class="row1">
