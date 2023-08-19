@@ -1,12 +1,8 @@
 <?php
 session_start(); 
-$sname= "localhost";
-$unmae= "root";
-$password = "";
-
-$db_name = "ecom";
-
-$conn = mysqli_connect($sname, $unmae, $password, $db_name);
+    include '../database.php';
+    
+    $conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
 if (!$conn) {
 	echo "Connection failed!";
@@ -59,7 +55,7 @@ echo "0 results";
 
 
 <?php
-require_once("dbconnection.php");
+require_once("../database.php");
 
 
 $id = $_GET['id'];

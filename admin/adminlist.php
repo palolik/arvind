@@ -1,5 +1,5 @@
 <?php 
-require_once("ecom.php");
+require_once("../database.php");
 
 $result = mysqli_query($mysqli, "SELECT * FROM adminup ORDER BY id DESC");
 ?>
