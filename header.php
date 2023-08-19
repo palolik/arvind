@@ -10,8 +10,8 @@ session_start();
     <title>Document</title>
 </head>
 
-<link rel="stylesheet" href="css/styl10.css">
-<link rel="stylesheet" href="css/mobb3.css">
+<link rel="stylesheet" href="css/styl11.css">
+<link rel="stylesheet" href="css/mobb4.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <?php
 

@@ -2,7 +2,7 @@
   body {
     width: -webkit-fill-available;
     margin: 0px;
-    background-color: rgb(243, 255, 246);
+    background-color: rgb(255, 255, 255);
 }
       .prorow{
         display: flex;
@@ -44,7 +44,7 @@
             font-size: 16px;
             font-weight: bold;
             padding: 0px 3px;
-            color: #23f8bc;
+            color: #9c0000;
     
       }
       .header {
@@ -53,6 +53,7 @@
         margin-top: 12px;
         justify-content: space-evenly;
         align-items: flex-start;
+        background-color: #fffbfb;
     }
     .container {
         position: relative;
@@ -70,7 +71,14 @@
       flex-direction: column;
       justify-content:flex-start;
       flex-wrap: nowrap;
-      height:75px ;
+      height:50px ;
+    }
+    .ic{
+      width: 15px;
+      margin-left: 3px;
+    }
+    .stars{
+      margin-bottom: 10px;
     }
     .image {
       opacity: 1;
@@ -247,9 +255,11 @@
             bottom: 0px;
             display: none;
         }
+       
+            
         .mobfooter {
           display: flex;
-          background-color: rgb(87, 236, 164);
+          background-color: #000000;
           height: 50px;
           bottom: 0;
           flex-direction: row;
@@ -258,36 +268,55 @@
           align-content: center;
           align-items: center;
           position: fixed;
+          color:#ddd;
           width: -webkit-fill-available;
       }
-        .searchbar{
-            width: -webkit-fill-available;
-            margin: 10px 8px;
+      .ic{
+        width: 20px;
+      }
+        .searchbar form{
+            display: grid;
+            grid-template-columns: 85% 15%;
         }
-        .searchbar input {
+        /* .searchbar input {
             width: inherit;
             background-color: #ffffff;
             height: 30px;
-            border-color: rgb(87, 236, 164);
-        }
-        .bontainer{
-          height: 200px;
-        }
-
-        .proside {
-          display: none;
-          position: inherit;
-          background-color: #ffffff;
-          flex-direction: column;
-          align-items: flex-end;
-      }
-      .promain {
-        display: grid;
-        grid-template-rows: 100% 0%;
+            border-color: rgb(221, 24, 24);
+        } */
+  .popo{
+    padding: 5px 10px;
+    background-color: #9c0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    height: 30px;
     }
-    .proimage {
-      width: -webkit-fill-available;
-      height: -webkit-fill-available;
+  .coco{
+    padding: 1px 5px;
+    border: 1px solid #640000;
+    height: 25px;
+
+    }
+
+  .bontainer{
+    height: 200px;
+  }
+
+    .proside {
+      display: none;
+      position: inherit;
+      background-color: #ffffff;
+      flex-direction: column;
+      align-items: flex-end;
+  }
+  .promain {
+      display: grid;
+      grid-template-rows: 100% 0%;
+  }
+  .proimage {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
   }
   .bardi{ 
     display: block;

@@ -75,10 +75,8 @@ $mysqli->close();
        <div class='details'>
                     <div class='dd'>
                         <div class=title>".$row['name']."</div> 
-                     
-                    
-                  
                     </diV>
+                    <div class='stars'><img class='ic' src='./image/icons/sf.png'><img class='ic' src='./image/icons/sf.png'><img class='ic' src='./image/icons/sh.png'><img class='ic' src='./image/icons/se.png'><img class='ic' src='./image/icons/se.png'> </div>
                     <div class=price>৳".$row['price']."</div>
                     </div>
                  <div >
