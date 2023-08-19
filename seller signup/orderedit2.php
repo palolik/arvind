@@ -1,12 +1,8 @@
 <?php
 session_start(); 
-$sname= "localhost";
-$unmae= "root";
-$password = "";
+include '../database.php';
 
-$db_name = "ecom";
-
-$conn = mysqli_connect($sname, $unmae, $password, $db_name);
+$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
 if (!$conn) {
 	echo "Connection failed!";
@@ -35,7 +31,7 @@ $id	=$_SESSION['id'];
 
 <?php
 
-    require_once("./ecom.php");
+    require_once("../database.php");
     if(isset($_POST['update'])){
         $orderid = mysqli_real_escape_string($mysqli, $_POST['orderid']);
         $status = mysqli_real_escape_string($mysqli, $_POST['status']);

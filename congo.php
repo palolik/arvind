@@ -10,10 +10,7 @@
 
     <?php
 
-$databaseHost = 'localhost';
-$databaseName = 'ecom';
-$databaseUsername = 'root';
-$databasePassword = '';
+include 'database.php';
 
 $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 

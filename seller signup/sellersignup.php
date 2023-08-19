@@ -1,12 +1,8 @@
 <?php
 session_start(); 
-$sname= "localhost";
-$unmae= "root";
-$password = "";
+include '../database.php';
 
-$db_name = "ecom";
-
-$conn = mysqli_connect($sname, $unmae, $password, $db_name);
+$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
 if (!$conn) {
 	echo "Connection failed!";
@@ -26,7 +22,7 @@ if (!$conn) {
  <html>
     <head>
         <title>Seller Sign up</title>
-        <link rel="stylesheet" type="text/css" href="../css/styl8.css">
+        <link rel="stylesheet" type="text/css" href="../css/styl10.css">
     </head>
 
     <body>
@@ -131,7 +127,7 @@ echo "0 results";
 
 <!-- 
 <?php
-    require_once("ecom.php");
+    require_once("../database.php");
     if(isset($_POST['submit'])){
         $name = mysqli_real_escape_string($mysqli, $_POST['name']);
         $mobileno = mysqli_real_escape_string($mysqli, $_POST['mobileno']);
@@ -162,7 +158,9 @@ echo "0 results";
 
 <?php
 
-$conn = mysqli_connect("localhost", "root", "", "ecom");
+include '../database.php';
+
+$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
 
 if(isset($_POST['submit']))

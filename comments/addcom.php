@@ -1,12 +1,9 @@
 <?php
 // Database connection details
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "ecom";
+include '../database.php';
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
 // Check connection
 

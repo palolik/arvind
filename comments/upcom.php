@@ -1,13 +1,10 @@
 
 
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "ecom";
+include '../database.php';
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 if(isset($_POST['create'])){
     $pid = mysqli_real_escape_string($conn, $_POST['pid']);
     $buyerid = mysqli_real_escape_string($conn, $_POST['buyerid']);

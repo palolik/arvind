@@ -14,15 +14,7 @@
 <?php 
 include 'header.php' ;
 
-
-
-
-
-
-$databaseHost = 'localhost';
-$databaseName = 'ecom';
-$databaseUsername = 'root';
-$databasePassword = '';
+include 'database.php';
 
 $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
@@ -51,12 +43,9 @@ $mysqli->close();
 
    <div class="prorow">
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "ecom";
+    include 'database.php';
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
    
 
