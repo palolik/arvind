@@ -19,10 +19,7 @@ include 'header.php'
 
 
 <?php
-$databaseHost = 'localhost';
-$databaseName = 'ecom';
-$databaseUsername = 'root';
-$databasePassword = '';
+include 'database.php';
 
 $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
@@ -61,13 +58,10 @@ $selectStatement->close();
 <div class="promain">
    
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "ecom";
+include 'database.php';
 
 // Create connection
-$connj = mysqli_connect($servername, $username, $password, $dbname);
+$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
 // Check connection
 if(isset($_POST['create'])){
@@ -239,12 +233,9 @@ include 'comments/addcom.php' ;
  
   <div class="proside">
   <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "ecom";
+    include 'database.php';
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
    
 

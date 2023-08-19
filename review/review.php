@@ -1,11 +1,8 @@
 <!-- <?php
 //session_start();
-$sname = "localhost";
-$unmae = "root";
-$password = "";
-$db_name = "ecom";
+include '../database.php';
 
-$conn = mysqli_connect($sname, $unmae, $password, $db_name);
+$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
 if (!$conn) {
     echo "Connection failed!";
@@ -22,7 +19,7 @@ if (!$conn) {
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/styl8.css">
+    <link rel="stylesheet" href="../css/styl10.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b830a6716b.js" crossorigin="anonymous"></script>
@@ -36,12 +33,9 @@ if (!$conn) {
 <?php 
 session_start(); 
 
-  $sname= "localhost";
-  $unmae= "root";
-  $password = "";
-  $db_name = "ecom";
-  
-  $conn = mysqli_connect($sname, $unmae, $password, $db_name);
+include '../database.php';
+
+$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
   
   
   $user_name=$_SESSION['user_name'];
@@ -109,10 +103,14 @@ session_start();
 
 <?php
 
+include '../database.php';
+
 
 if (isset($_POST['submit'])) {
 
-    $conn = mysqli_connect("localhost","root","","ecom");
+
+
+$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
     $image = $_FILES['image']['name'];
     $target = "../image/review/"  . basename($_FILES['image']['name']);

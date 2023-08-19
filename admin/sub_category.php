@@ -2,7 +2,7 @@
 <html>
 
 <?php
-    require_once("ecom.php");
+    require_once("../database.php");
     if(isset($_POST['submit'])){
         
         $category = mysqli_real_escape_string($mysqli, $_POST['category']);
@@ -29,7 +29,9 @@
 <select id="category" name="category">
   <?php
     // connect to database
-    $conn = mysqli_connect("localhost", "root", "", "ecom");
+    include '../database.php';
+
+    $conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
     // query for cars
     $result = mysqli_query($conn, "SELECT * FROM category");
@@ -51,7 +53,9 @@
     <select id="sub_category" name="sub_category">
   <?php
     // connect to database
-    $conn = mysqli_connect("localhost", "root", "", "ecom");
+   include '../database.php';
+    
+    $conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
     // query for cars
     $result = mysqli_query($conn, "SELECT * FROM category");

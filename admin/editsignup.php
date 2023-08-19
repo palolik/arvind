@@ -1,5 +1,5 @@
 <?php
-    require_once("ecom.php");
+    require_once("../database.php");
     if(isset($_POST['update'])){
         $id = mysqli_real_escape_string($mysqli, $_POST['id']);
         $user_name = mysqli_real_escape_string($mysqli, $_POST['user_name']);

@@ -1,12 +1,8 @@
 <?php
 // Connect to MySQL database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "ecom";
+include '../database.php';
 
-
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }

@@ -77,8 +77,9 @@
 
 
 <?php
+include '../../database.php';
 
-$conn = mysqli_connect("localhost", "root", "", "ecom");
+$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
 
 if(isset($_POST['submit']))

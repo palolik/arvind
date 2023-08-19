@@ -96,7 +96,9 @@
 
 <?php
 
-$conn = mysqli_connect("localhost", "root", "", "ecom");
+include '../database.php';
+    
+    $conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 $msg = "";
 
 if(isset($_POST['submit']))

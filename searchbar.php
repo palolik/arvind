@@ -1,11 +1,8 @@
 <?php
 
-$server = "localhost";
-$username = "root";
-$password = "";
-$dbname = "ecom";
+include 'database.php';
 
-$conn = mysqli_connect($server, $username, $password, $dbname);
+$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
 ?>
 

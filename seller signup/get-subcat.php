@@ -1,6 +1,6 @@
 <?php
 
-include "ecom.php";
+include "../database.php";
 $category_id = $_POST["category"];
 $result = mysqli_query($mysqli,"SELECT * FROM category WHERE parent_id=$category_id");
 

@@ -1,12 +1,8 @@
 <?php
 session_start(); 
-$sname= "localhost";
-$unmae= "root";
-$password = "";
+include '../../database.php';
 
-$db_name = "ecom";
-
-$conn = mysqli_connect($sname, $unmae, $password, $db_name);
+$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
 if (!$conn) {
 	echo "Connection failed!";
@@ -53,7 +49,7 @@ echo "0 results";
 
 
 <?php
-require_once("../ecom.php");
+require_once("../../database.php");
 
 $id = $_GET['id'];
 $result = mysqli_query($mysqli, "SELECT * FROM productdetails WHERE id=$id");

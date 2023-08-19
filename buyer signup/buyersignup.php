@@ -1,8 +1,8 @@
 <?php
 session_start(); 
-include '../db.php';
+include '../database.php';
 
-$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+
 
 ?>
 

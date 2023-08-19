@@ -1,11 +1,8 @@
 <?php
 session_start();
-$sname = "localhost";
-$unmae = "root";
-$password = "";
-$db_name = "ecom";
+include '../database.php';
 
-$conn = mysqli_connect($sname, $unmae, $password, $db_name);
+$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
 if (!$conn) {
     echo "Connection failed!";
@@ -100,7 +97,9 @@ multi image uploader fixed
                             <select id="category" name="category">
                                 <?php
                                     // connect to database
-                                    $conn = mysqli_connect("localhost", "root", "", "ecom");
+                                    include '../database.php';
+
+                                    $conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
                                     // query for cars
                                     $result = mysqli_query($conn, "SELECT * FROM category");
@@ -122,7 +121,9 @@ multi image uploader fixed
                             <select id="subcategory" name="subcategory">
                                 <?php
                                     // connect to database
-                                    $conn = mysqli_connect("localhost", "root", "", "ecom");
+                                    include '../database.php';
+
+                                    $conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
                                     // query for cars
                                     
@@ -225,7 +226,9 @@ multi image uploader fixed
 
         <?php
 
-        $conn = mysqli_connect("localhost", "root", "", "ecom");
+            include '../database.php';
+
+            $conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
 
         if (isset($_POST['submit'])) {

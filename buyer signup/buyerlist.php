@@ -1,8 +1,7 @@
 <?php
 session_start(); 
-include '../db.php';
+include '../database.php';
 
-$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
 if (!$conn) {
 	echo "Connection failed!";
@@ -88,4 +87,3 @@ $result = mysqli_query($mysqli, "SELECT * FROM buyersignup ORDER BY id DESC");
 
 
 
-//hoga
