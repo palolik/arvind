@@ -291,6 +291,7 @@ input[type=file]::file-selector-button:hover {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 10px;
   }
   .iconmain{
     width: 150px;
@@ -381,7 +382,9 @@ cursor: pointer;
 
   }
   .cardi:hover {
-    border: 1px solid #9c0000;
+    box-shadow: 0 0 2px 1px rgb(186, 0, 0);
+    height: 301px;
+    width: 201px;
     transition: .5s ease;}
    .title{
       padding: 3px 0px 0px 3px ;
@@ -604,6 +607,7 @@ cursor: pointer;
   .promain{
 display: grid;
 grid-template-columns: 80% 20%;
+height: -webkit-fill-available;
 
   }
   .proside {
@@ -679,7 +683,7 @@ grid-template-columns: 80% 20%;
       background-color: #000000;
       padding: 15px 0;
       display: block;
-      position: fixed;
+      position:inherit;
       bottom: 0;
       width: 100%;
   }
