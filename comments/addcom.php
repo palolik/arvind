@@ -1,6 +1,6 @@
 <?php
 // Database connection details
-include '../database.php';
+include './database.php';
 
 // Create connection
 $conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);

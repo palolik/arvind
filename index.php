@@ -14,9 +14,11 @@
 <?php 
 include 'header.php' ;
 
-include 'database.php';
+include 'database.php' ;
 
-$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+
+
+
 
 // Prepare the update statement
 $updateStatement = $mysqli->prepare("UPDATE views SET value=value+1 WHERE name=?");
@@ -43,11 +45,6 @@ $mysqli->close();
 
    <div class="prorow">
 <?php
-    include 'database.php';
-
-    $conn = new mysqli($databaseHost, $databaseUsername, $databasePassword, $databaseName);
-
-   
 
  
 
@@ -57,8 +54,16 @@ $mysqli->close();
     if ($result->num_rows > 0)
     
     {
-
+      function inner_function($rating) {
+        $stars = "";
+        for ($i = 0; $i < $rating; $i++) {
+          $stars .= "<img class='ic' src='./image/icons/sf.png'>";
+        }
+        return $stars;
+      }
     while($row = $result->fetch_assoc()) { 
+       
+
           echo  
     "<div class='cardi' value='read more' name='readmore'  style=cursor: pointer;>
       <div class='bontainer'>
@@ -76,7 +81,8 @@ $mysqli->close();
                     <div class='dd'>
                         <div class=title>".$row['name']."</div> 
                     </diV>
-                    <div class='stars'><img class='ic' src='./image/icons/sf.png'><img class='ic' src='./image/icons/sf.png'><img class='ic' src='./image/icons/sh.png'><img class='ic' src='./image/icons/se.png'><img class='ic' src='./image/icons/se.png'> </div>
+                    <div class='stars'>" .
+                    inner_function($row["rating"]) ."</div>
                     <div class=price>৳".$row['price']."</div>
                     </div>
                  <div >
