@@ -1,14 +1,25 @@
 
 <div class="mobfooter">
+<div><div class="dropdown">
+    <button class="dropbtn"><img class="ic" src="./image/icons/cat.png">
+    </button>
+    
+    <div class="dropdown-content">
+
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div></div>
 	<div><a href="index.php"><img class="ic" src="./image/icons/home.png"></a></div>
-	<div><img class="ic" src="./image/icons/cat.png"></div>
-	<div><a href="index.php"><img class="ic" src="./image/icons/cart.png"></a>
+	
+	<div><a href="cart.php"><img class="ic" src="./image/icons/cart.png"></a>
 </div>
 
 	<div><a href="buyer signup/loginindex.php"><img class="ic" src="./image/icons/pro.png"></a></div>
 </div>
 <footer>
-<link rel="stylesheet" href="styl16.css">
+<link rel="stylesheet" href="styl18.css">
 
 <div class="container1">
   	 	<div class="row1">

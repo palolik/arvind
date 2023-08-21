@@ -13,7 +13,7 @@ $conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $dat
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styllep.css">
-    <link rel="stylesheet" href="css/mobb9.css">
+    <link rel="stylesheet" href="css/mobb10.css">
     <title>Search bar</title>
 </head>
 <body>

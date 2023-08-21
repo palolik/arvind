@@ -12,8 +12,8 @@ session_start();
 
 </head>
 
-<link rel="stylesheet" href="../css/styl16.css">
-<link rel="stylesheet" href="../css/mobb9.css">
+<link rel="stylesheet" href="../css/styl18.css">
+<link rel="stylesheet" href="../css/mobb10.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <?php
 

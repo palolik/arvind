@@ -154,6 +154,9 @@
         <div class="proside">
             <?php
        
+
+
+       
        $sql5 = "SELECT category
        FROM productdetails
        WHERE id =$id;";
