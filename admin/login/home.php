@@ -22,37 +22,40 @@ if (!$conn) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+    
     .kp{ 
       margin:0px;
-
       list-style-type:none;
       display:block;
-      font-size:medium;
+      font-size:15px;
       width:100px;
       color:#00203fff;
       font-size:12px;
       padding:10px; 
       width: 150px;
-      background-color: #ADEFD1FF;
-      color:midnightblue;
+      background-color: #ccc;
+      color:black;
       text-decoration:none;
-      }    
+      }   
       .kpa{ 
       margin:0px;
       list-style-type:none;
       display:block;
-      font-size:medium;
+      font-size:15px;
       width:100px;
       color:#00203fff;
       font-size:12px;
       padding:10px; 
       width: 150px;
-      background-color:lightseagreen;
-      color:midnightblue;
+      background-color:#9c0000;      
+      color:#fff;
       text-decoration:none;
-      } 
+      }  
+
     .kp:hover{
-      background-color:aqua;
+        background-color: #c3ffe1;
+      color: black; ;
+      
       }
       .adnav{
 display: flex;
@@ -62,6 +65,7 @@ flex-direction: row;
   
 </style> 
 </head>
+<div class="iconmain"> <img src="../../image//website/log.png" style="width:150px"></div>
 <body>
 <?php
 

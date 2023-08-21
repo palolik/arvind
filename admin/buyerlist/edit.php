@@ -1,8 +1,12 @@
 <?php
 session_start(); 
-include '../../database.php';
+$sname= "localhost";
+$unmae= "root";
+$password = "";
 
-$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+$db_name = "ecom";
+
+$conn = mysqli_connect($sname, $unmae, $password, $db_name);
 
 if (!$conn) {
 	echo "Connection failed!";
@@ -19,7 +23,52 @@ $id	=$_SESSION['id'];
 <html>
     <head>
         <title>Buyer Sign up</title>
+        <style>
+    .kp{ 
+      margin:0px;
+      list-style-type:none;
+      display:block;
+      font-size:medium;
+      width:100px;
+      color:#00203fff;
+      font-size:12px;
+      padding:10px; 
+      width: 200px;
+      background-color: #ADEFD1FF;
+      color:midnightblue;
+      text-decoration:none;
+     
+      }   
+      .kpa{ 
+      margin:0px;
+      list-style-type:none;
+      display:inline;
+      font-size:medium;
+      width:100px;
+      color:#00203fff;
+      font-size:12px;
+      padding:10px; 
+      width: 200px;
+      background-color:lightseagreen;      
+      color:midnightblue;
+      text-decoration:none;
+      justify-content: space-evenly
+      }  
+
+    .kp:hover{
+      background-color:aqua;
+      }
+      .adnav{
+display: flex;
+flex-direction: row;
+
+      }
+
+      
+     
+ </style>
     </head>
+    <div class="iconmain"> <img src="../../image//website/log.png" style="width:150px"></div>
 
     <body>
 
@@ -52,7 +101,10 @@ echo "0 results";
 
 
 <?php
-require_once("../../database.php");
+
+
+
+require_once("../ecom.php");
 
 $id = $_GET['id'];
  $result = mysqli_query($mysqli, "SELECT * FROM buyersignup WHERE id=$id");
@@ -72,6 +124,21 @@ $id = $_GET['id'];
 <html>
     <head>
         <body>
+       <div class="adnav">
+        <a class="kp" href="../login/home.php">Home</a>
+
+<a class="kp" href="../productlist/productlist.php">Product List</a>
+<a class="kpa" href="buyerlist.php">Buyer List</a>
+<a class="kp" href="../sellerlist/show.php">Seller List</a>
+<a class="kp" href="../category.php">Category</a>
+<a class="kp" href="../sub_cat.php">SubCategory</a>
+<a class="kp" href="../../affiliate/show.php">Affiliate List</a>
+<a class="kp" href="../statistics.php">Statistics</a>
+<a class="kp" href="../folder.php">add folder</a>
+
+
+<a  href="../login/logout.php"> <input class="kp" type="submit" name="" value="Logout" ></a>
+</div>
         <form method="POST" name="edit" action="editsignup.php">
 
 <lable >Name:</lable>
@@ -111,6 +178,7 @@ $id = $_GET['id'];
 
 
 </form>
+
         </body>
     </head>
 </html>

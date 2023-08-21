@@ -27,8 +27,8 @@
       font-size:12px;
       padding:10px; 
       width: 150px;
-      background-color: #ADEFD1FF;
-      color:midnightblue;
+      background-color: #ccc;
+      color:black;
       text-decoration:none;
       }   
       .kpa{ 
@@ -41,13 +41,14 @@
       font-size:12px;
       padding:10px; 
       width: 150px;
-      background-color:lightseagreen;      
-      color:midnightblue;
+      background-color:#9c0000;      
+      color:#fff;
       text-decoration:none;
       }  
 
     .kp:hover{
-      background-color:aqua;
+        background-color: #c3ffe1;
+      color: black; ;
       }
       .adnav{
 display: flex;
@@ -57,6 +58,7 @@ flex-direction: row;
   
 </style> 
 </head>
+<div class="iconmain"> <img src="../image//website/log.png" style="width:150px"></div>
 <body>
 
 
@@ -76,7 +78,7 @@ flex-direction: row;
 <a  href="logout.php"> <input class="kp" type="submit" name="" value="Logout" ></a>
 </div>
 
-    <h3>Add Category</h3>
+    <h3 style="text-align:center" >Add Category</h3>
 
 <form  method="POST" name="add">
 
