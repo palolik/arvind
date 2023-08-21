@@ -35,7 +35,6 @@
 
 
 
-    // Prepare the update statement
     $updateStatement = $mysqli->prepare("UPDATE productdetails SET value=value+1 WHERE id=?");
     $updateStatement->bind_param('s', $id);
     $updateStatement->execute();
@@ -138,48 +137,33 @@
     }
 </script>
 
-
-
 <!-- 
             <?php
-
             $cat = mysqli_query($mysqli, "SELECT * FROM comments WHERE pid=$id ");
             while ($res = mysqli_fetch_assoc($cat)) {
-
                 echo $res['comment'] . "<br>";
-
                 echo $res['time'] . "</td><br><br>";
             };
-
-
             include 'comments/addcom.php';
             ?> -->
         <?php "
-   
             ";
         }
        ?>
-
-
-
-
     </div>
-
         <div class="proside">
             <?php
-            include 'database.php';
-
-            $conn = new mysqli($databaseHost, $databaseUsername, $databasePassword, $databaseName);
-
-
-
-
-
-            $sql = "SELECT * FROM productdetails ";
-            $result = $conn->query($sql);
-
+       
+       $sql5 = "SELECT category
+       FROM productdetails
+       WHERE id =$id;";
+       $result3 = mysqli_query($conn, $sql5);
+       
+       // Get the category
+       $category = mysqli_fetch_assoc($result3)['category'];
+            $sql4 = "SELECT * FROM productdetails where  category=$category";
+            $result = $conn->query($sql4);
             if ($result->num_rows > 0) {
-
                 while ($row = $result->fetch_assoc()) {
                     echo
                     "<div class=cardi value='read more' name='readmore'  style=cursor: pointer;>
@@ -188,33 +172,23 @@
          <div class='middle'>
             <form action='product.php' method='post'>
                  <input class='text' type='submit' value='details' name='readmore'>
- 
                 <input  type='hidden' name='id' value=" . $row['id'] . ">                
             </form> 
          </div>
-       </div>
-                 
+       </div>               
        <div class='details'>
                     <div class='dd'>
                         <div class=title>" . $row['name'] . "</div> 
                    <div class=price>৳" . $row['price'] . "</div>
                     </div>
-           </div>";
+           </div></div>";
                 }
             }
-
-            ?>
-
-      
+            ?>      
     </div>
         </div></div></div>
 </body>
 <?php
 include 'footter.php'
 ?>
-
-
-
-</html>
-
 </html>

@@ -1,8 +1,8 @@
 @media screen and (min-width:0px) and (max-width: 450px) {
   .add {
-    background-color: #f81414;
+    background-color: #9c0000;
     border: none;
-    color: rgb(255, 14, 14);
+    color: #9c0000;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -51,7 +51,7 @@
     text-decoration: none;
   }
   .addd {
-    color: #000;
+    color: #ffffff;
   }
   body {
     width: -webkit-fill-available;
