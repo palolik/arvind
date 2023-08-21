@@ -1,8 +1,11 @@
 <?php
 session_start(); 
-include '../../database.php';
+$sname= "localhost";
+$unmae= "root";
+$password = "";
+$db_name = "ecom";
 
-$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+$conn = mysqli_connect($sname, $unmae, $password, $db_name);
 
 if (!$conn) {
 	echo "Connection failed!";
@@ -32,8 +35,8 @@ if (!$conn) {
       font-size:12px;
       padding:10px; 
       width: 150px;
-      background-color: #ADEFD1FF;
-      color:midnightblue;
+      background-color: #ccc;
+      color:black;
       text-decoration:none;
       }   
       .kpa{ 
@@ -46,36 +49,49 @@ if (!$conn) {
       font-size:12px;
       padding:10px; 
       width: 150px;
-      background-color:lightseagreen;      
-      color:midnightblue;
+      background-color:#9c0000;      
+      color:#fff;
       text-decoration:none;
       }  
 
     .kp:hover{
-      background-color:aqua;
-      }
+        background-color: #c3ffe1;
+      color: black; ;
+    }
       .adnav{
 display: flex;
 flex-direction: row;
 
       }
+      .kptp{
+   background-color:#ccc;
+   margin:5px;
+   padding:5px;
+   overflow-x: scroll;
+   width:100px
+     }
+      #kpp{
+        justify-content: space-around;
+      }
+
   
 </style> 
 </head>
+<div class="iconmain"> <img src="../../image//website/log.png" style="width:150px"></div>
 <body>
 <?php
 
 $sql = "SELECT * FROM adminup ";
 
- $sql = "SELECT * FROM adminup WHERE user_name='$user_name' AND id='$id'";
+$sql = "SELECT * FROM adminup WHERE user_name='$user_name' AND id='$id'";
 
 $result = $conn->query($sql);
-
 if ($result->num_rows > 0) {
 
- while($row = $result->fetch_assoc()) {
-     echo "<div class='adnav'><a class='kp'>". $row["id"] . $row["user_name"]."</a>";
- }
+    while($row = $result->fetch_assoc()) {
+        echo "<div class='adnav'><a class='kp'>". $row["id"] . $row["user_name"]."</a>";
+    }
+   
 
 } else {
 echo "0 results";
@@ -94,14 +110,17 @@ echo "0 results";
     <a class="kp" href="../folder.php">add folder</a>
 
 
-    <a  href="logout.php"> <input class="kp" type="submit" name="" value="Logout" ></a>
+    <a  href="../login/logout.php"> <input class="kp" type="submit" name="" value="Logout" ></a>
 </div>
     </body>
 </html>
 
 
 <?php 
-include '../../database.php';
+$databaseHost = 'localhost';
+$databaseName = 'ecom';
+$databaseUsername = 'root';
+$databasePassword = '';
 
 $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
@@ -113,21 +132,21 @@ $result = mysqli_query($mysqli, "SELECT * FROM buyersignup ORDER BY id DESC");
 <html>
     <head>
         <title>Buyer Sign up</title>
-        <td><a href="../login/home.php">Home</a>
+        <td><h1 style="text-align:center">Buyer List</h1>
     </head>
 
     <body>
-        <table>
-            <tr>
+        <table style="width:100%">
+            <tr class="kptp">
                 <td>ID</td>
                 <td>Name</td>
                 <td>Mobile no</td>
                 <td>E-mail Address</td>
                 <td>Password</td>
                 <td>Confirm Password</td>
+                <td>User Name</td>
                 <td>Delete</td>
                 <td>Edit</td>
-                <td>User Name</td>
             </tr>
 
             <?php

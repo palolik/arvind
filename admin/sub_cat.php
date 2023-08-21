@@ -2,7 +2,7 @@
 <html>
 
 <?php
-    require_once("../database.php");
+    require_once("ecom.php");
     if(isset($_POST['submit'])){
         
         $sub_category = mysqli_real_escape_string($mysqli, $_POST['sub_category']);
@@ -19,37 +19,39 @@
     <title>Sub - Category Adding</title>
     <style>
         
-    .kp{ 
+        .kp{ 
       margin:0px;
       list-style-type:none;
       display:block;
-      font-size:medium;
+      font-size:15px;
       width:100px;
       color:#00203fff;
       font-size:12px;
       padding:10px; 
       width: 150px;
-      background-color: #ADEFD1FF;
-      color:midnightblue;
+      background-color: #ccc;
+      color:black;
       text-decoration:none;
       }   
       .kpa{ 
       margin:0px;
       list-style-type:none;
       display:block;
-      font-size:medium;
+      font-size:15px;
       width:100px;
       color:#00203fff;
       font-size:12px;
       padding:10px; 
       width: 150px;
-      background-color:lightseagreen;      
-      color:midnightblue;
+      background-color:#9c0000;      
+      color:#fff;
       text-decoration:none;
       }  
 
     .kp:hover{
-      background-color:aqua;
+        background-color: #c3ffe1;
+      color: black; ;
+      
       }
       .adnav{
 display: flex;
@@ -59,6 +61,7 @@ flex-direction: row;
   
 </style> 
 </head>
+<div class="iconmain"> <img src="../image//website/log.png" style="width:150px"></div>
 <body>
 <div class='adnav'><a class='kp'></a> 
 <a class="kp" href="../admin/login/home.php">Home</a>
@@ -71,13 +74,13 @@ flex-direction: row;
 <a class="kp" href="../affiliate/show.php">Affiliate List</a>
 <a class="kp" href="../admin/statistics.php">Statistics</a>
 <a class="kp" href="../admin/folder.php">add folder</a>
-<a  href="logout.php"> <input class="kp" type="submit" name="" value="Logout" ></a>
+<a  href="login/logout.php"> <input class="kp" type="submit" name="" value="Logout" ></a>
 </div>
 
 
 
 
-    <h3>Add Sub-Category</h3>
+    <h3 style="text-align:center">Add Sub-Category</h3>
 
 <form  method="POST" name="add">
 
@@ -125,8 +128,4 @@ flex-direction: row;
 </body>
 
 
-
-
-
-</html>
 
