@@ -1,5 +1,18 @@
 @media screen and (min-width:451px) and (max-width: 3000px) {
-
+  .add {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
   .p11 {
     height: 450px;
     width: 350px;
@@ -483,15 +496,7 @@ cursor: pointer;
       
       }
       
-      .add{
-        background-color:white;
-        border: 5;
-        outline: 5;
-        color: black;
-        padding: 10px 15px;
-        font-family: 'poppins',sans-serif;
-  
-      }
+    
       .buy{
         background-color:white;
         border: 5;

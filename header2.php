@@ -12,8 +12,8 @@ session_start();
 
 </head>
 
-<link rel="stylesheet" href="css/styl15.css">
-<link rel="stylesheet" href="css/mobb8.css">
+<link rel="stylesheet" href="../css/styl15.css">
+<link rel="stylesheet" href="../css/mobb8.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <?php
 
@@ -34,11 +34,11 @@ session_start();
   $conn = mysqli_connect($sname, $unmae, $password, $db_name);
 
  
-      include 'config/database.php';
+      include '../config/database.php';
 
 
 
-      include_once "objects/cart_item.php";
+      include_once "../objects/cart_item.php";
 
       $database = new Database();
       $db = $database->getConnection();
@@ -50,7 +50,7 @@ session_start();
    
 </style>
 <div class="header">
-  <div class="iconmain"> <img src="image/website/log.png" style="width:200px"></div>
+  <div class="iconmain"> <img src="../image/website/log.png" style="width:200px"></div>
 
 </div>
 
@@ -58,7 +58,7 @@ session_start();
 <div class="searchbar">
 <form  action="search.php" method="POST">
         <input class="coco" type="text" name="search" placeholder="Search . . .">
-        <button class="popo" type="submit" name="submit-search"><img src="image/website/search.png" style="width:15px"></button>
+        <button class="popo" type="submit" name="submit-search"><img src="../image/website/search.png" style="width:15px"></button>
     </form>
 
 </div>
@@ -80,7 +80,7 @@ session_start();
  <div >
   <form class="fofo" action="search.php" method="POST">
         <input class="coco" type="text" name="search" placeholder="Search . . .">
-        <button class="popo" type="submit" name="submit-search"><img src="image/website/search.png" style="width:15px"></button>
+        <button class="popo" type="submit" name="submit-search"><img src="../image/website/search.png" style="width:15px"></button>
     </form>
 </div>
           <div style="display:flex">

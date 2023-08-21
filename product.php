@@ -107,8 +107,8 @@
                                     <div class=longdescription>" . $row['longdescription'] . "
                                     </div><div class=variation>" . $row['variation'] . " </div>
                                     <br><br> <div class=availability>" . $row['availability'] . " </div>
-
-                                    <button class=add><a href='add_to_cart.php?id={$row['id']}'>Add to Cart</a></button>
+<div class=mn>
+                                    <button class=add ><a class=addd href='add_to_cart.php?id={$row['id']}'>Add to Cart</a></button></div>
                                 </div>   
              
                 
