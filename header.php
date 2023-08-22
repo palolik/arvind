@@ -12,19 +12,14 @@ session_start();
 
 </head>
 
-<link rel="stylesheet" href="css/styl18.css">
-<link rel="stylesheet" href="css/mobb10.css">
+<link rel="stylesheet" href="css/styl19.css">
+<link rel="stylesheet" href="css/mobb12.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <?php
 
   $_SESSION['cart']=isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
 
-  $sname= "localhost";
-  $unmae= "root";
-  $password = "";
-  $db_name = "ecom";
-  
-  $conn = mysqli_connect($sname, $unmae, $password, $db_name);
+  include 'database.php';
   
   
   $user_name= isset($_SESSION['user_name']) ? $_SESSION['user_name'] : null ;

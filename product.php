@@ -136,27 +136,23 @@
         document.querySelector('.pompom').style.background = "url('./image/products/<?php echo $row["folder_location"]; ?>/<?php echo $row["image6"]; ?>') center center / cover";
     }
 </script>
+<?php 
 
-<!-- 
-            <?php
-            $cat = mysqli_query($mysqli, "SELECT * FROM comments WHERE pid=$id ");
-            while ($res = mysqli_fetch_assoc($cat)) {
-                echo $res['comment'] . "<br>";
-                echo $res['time'] . "</td><br><br>";
-            };
-            include 'comments/addcom.php';
-            ?> -->
+include 'review/showreview.php'; ?>
+<div class=commentbox>" <?php
+include 'comments/showcom.php';
+include 'comments/addcom.php' ?>
+
+</div>
+
+
         <?php "
             ";
         }
        ?>
     </div>
         <div class="proside">
-            <?php
-       
-
-
-       
+            <?php     
        $sql5 = "SELECT category
        FROM productdetails
        WHERE id =$id;";

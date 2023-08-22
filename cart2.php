@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="css/styl3.css">
-<link rel="stylesheet" href="css/mobb10.css">
+<link rel="stylesheet" href="css/mobb12.css">
 <?php
 
   $_SESSION['cart']=isset($_SESSION['cart']) ? $_SESSION['cart'] : array();

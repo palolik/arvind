@@ -1,12 +1,7 @@
 <?php
 session_start(); 
-$sname= "localhost";
-$unmae= "root";
-$password = "";
+include 'ecom.php';
 
-$db_name = "ecom";
-
-$conn = mysqli_connect($sname, $unmae, $password, $db_name);
 
 if (!$conn) {
 	echo "Connection failed!";

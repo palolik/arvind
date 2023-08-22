@@ -19,7 +19,7 @@
 	<div><a href="buyer signup/loginindex.php"><img class="ic" src="../image/icons/pro.png"></a></div>
 </div>
 <footer>
-<link rel="stylesheet" href="styl18.css">
+<link rel="stylesheet" href="styl19.css">
 
 <div class="container1">
   	 	<div class="row1">

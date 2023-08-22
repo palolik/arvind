@@ -16,13 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "Folder created successfully.";
 
                 // Store the folder name in the database
-                $dbHost = 'localhost';
-                $dbName = 'ecom';
-                $dbUser = 'root';
-                $dbPass = '';
-
-                // Connect to the database
-                $conn = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName);
+           include 'ecom.php';
 
                 // Check connection
                 if (mysqli_connect_errno()) {
