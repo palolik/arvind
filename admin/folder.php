@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "Folder created successfully.";
 
                 // Store the folder name in the database
-           include 'ecom.php';
+                include '../database.php';
 
                 // Check connection
                 if (mysqli_connect_errno()) {

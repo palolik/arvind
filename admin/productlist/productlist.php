@@ -129,7 +129,6 @@ echo "0 results";
     <?php
         include '../../database.php';
 
-        $conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
         
     if($conn){
         

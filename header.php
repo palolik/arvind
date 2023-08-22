@@ -26,7 +26,6 @@ session_start();
           
   $idd	= isset($_SESSION['id']) ? $_SESSION['id'] : null; 
 
-  $conn = mysqli_connect($sname, $unmae, $password, $db_name);
 
  
       include 'config/database.php';

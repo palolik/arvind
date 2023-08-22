@@ -1,7 +1,7 @@
 <?php
 session_start(); 
 
-include '../database.php';
+include '../../database.php';
 
 if (!$conn) {
 	echo "Connection failed!";
@@ -113,7 +113,7 @@ echo "0 results";
 
 
 <?php 
-include '../database.php';
+include '../../database.php';
 
 
 

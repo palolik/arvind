@@ -2,7 +2,7 @@
 <html>
 
 <?php
-    require_once("ecom.php");
+    require_once('../database.php');
     if(isset($_POST['submit'])){
         
         $sub_category = mysqli_real_escape_string($mysqli, $_POST['sub_category']);

@@ -1,12 +1,6 @@
 <?php
 session_start(); 
-$sname= "localhost";
-$unmae= "root";
-$password = "";
-
-$db_name = "ecom";
-
-$conn = mysqli_connect($sname, $unmae, $password, $db_name);
+include '../database.php';
 
 if (!$conn) 
 {
@@ -144,7 +138,7 @@ echo "0 results";
 
             </tr>
     <?php
-    $conn = mysqli_connect("localhost", "root", "", "ecom");
+
     if($conn){
         
         $sql = "SELECT * FROM affiliate";

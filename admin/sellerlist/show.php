@@ -1,7 +1,6 @@
 <?php
 session_start(); 
-include 'ecom.php';
-
+include '../../database.php';
 
 if (!$conn) {
 	echo "Connection failed!";
@@ -137,7 +136,6 @@ echo "0 results";
 
             </tr>
     <?php
-    $conn = mysqli_connect("localhost", "root", "", "ecom");
     if($conn){
         
         $sql = "SELECT * FROM sellersignup";
