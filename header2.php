@@ -12,7 +12,7 @@ session_start();
 
 </head>
 
-<link rel="stylesheet" href="../css/styl19.css">
+<link rel="stylesheet" href="../css/styl21.css">
 <link rel="stylesheet" href="../css/mobb12.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <?php
@@ -25,7 +25,6 @@ include 'database.php';
           
   $idd	= isset($_SESSION['id']) ? $_SESSION['id'] : null; 
 
-  $conn = mysqli_connect($sname, $unmae, $password, $db_name);
 
  
       include '../config/database.php';

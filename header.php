@@ -12,7 +12,7 @@ session_start();
 
 </head>
 
-<link rel="stylesheet" href="css/styl19.css">
+<link rel="stylesheet" href="css/styl21.css">
 <link rel="stylesheet" href="css/mobb12.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <?php
@@ -64,10 +64,17 @@ session_start();
     </button>
     
     <div class="dropdown-content">
+<?php $result7 = mysqli_query($mysqli, "SELECT * FROM category where parent_id=0");
+  while($caty = mysqli_fetch_assoc($result7))
 
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+  {
+echo "
+<a href='#'>" .$caty['category'] ." </a>
+  
+";
+  }
+ ?>
+      
     </div>
   </div>
 </div>

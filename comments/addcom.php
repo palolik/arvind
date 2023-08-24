@@ -26,9 +26,9 @@ function generate_buyerid(){
             <input style='display:none;' type=text autocomplete="off" name='buyerid'><br>
             <input style='display:none;' type=text autocomplete="off" name='buyername'><br>
 
-            <input style='margin:10px; width:-webkit-fill-available' type=text autocomplete="off" name='comment'><br>
+            <input class="lals" type=text autocomplete="off" name='comment'><br>
            <input style='display:none;' type=text autocomplete="off" name="time" value="<?php echo (strftime("%R %a %d %b")); ?>" >
-            <button style='margin:10px; width:-webkit-fill-available' type='submit' name='create'>Create</button>
+            <button class="add" type='submit' name='create'>Add Comment</button>
 </form>  
           
 

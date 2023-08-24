@@ -1,7 +1,7 @@
 
 
 <div class="combox">
-    <p>Comments Regurding the Product</p>
+    <p>Questions regurding the product</p>
 <?php
             $ratt = mysqli_query($mysqli, "SELECT * FROM comments WHERE pid=$id ");
             while ($restt = mysqli_fetch_assoc($ratt)) {

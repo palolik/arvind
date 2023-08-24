@@ -1,7 +1,7 @@
 
 
 <div class="combox">
-    <p>Comments Regurding the Product</p>
+    <p>Reviews</p>
 <?php
 
 
@@ -24,10 +24,10 @@ function inner_function($ratingss) {
                         </div>
                         <div class=ox14>"
                         . $resy['review'] ."
-                        </div></div>
+                        </div></div>";
                         
                         
-                      ";
+                      
             };
 ?>
 </div>

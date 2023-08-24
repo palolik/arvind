@@ -10,7 +10,9 @@ include '../database.php';
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/styl3.css">
+    <link rel="stylesheet" href="../css/styl21.css">
+    <link rel="stylesheet" href="../css/mobb12.css">
+
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,7 +49,8 @@ include '../database.php';
 
        
 
-        
+        header("location:loginindex.php");
+
 
     }
 
@@ -81,29 +84,28 @@ include '../database.php';
 <form method="POST" name="add">
 <div class="fits">
         <lable class="lal" >Name:</lable>
-        <input type="text" name="name" placeholder="Name">
+        <input class="lals" type="text" name="name" placeholder="Name">
     </div> 
 <div class="fits">
         <lebel class="lal">Mobile no:</lebel>
-        <input type ="text" name="mobileno" placeholder="Enter your mobile no" required>
+        <input class="lals" type ="text" name="mobileno" placeholder="Enter your mobile no" required>
     </div> 
 <div class="fits">
         <lebel class="lal">E-mail Address:</lebel>
-        <input type="email" name="emailaddress" placeholder="Enter your email address" required>
+        <input class="lals" type="email" name="emailaddress" placeholder="Enter your email address" required>
     </div>
 <div class="fits">
         <lebel class="lal">District</lebel>
-        <select id="district" name="district">
+        <select class="lals" id="district" name="district">
   <?php
     // connect to database
-    $conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
     // query for cars
-    $result = mysqli_query($conn, "SELECT * FROM sub_category");
+    $result = mysqli_query($conn, "SELECT * FROM districts");
 
     // loop through results and create option for each car
     while ($row = mysqli_fetch_assoc($result)) {
-      echo '<option value="' . $row["sub_category"] . '">' . $row["sub_category"] . '</option>';
+      echo '<option value="' . $row["names"] . '">' . $row["names"] . '</option>';
     }
 
     // close database connection
@@ -113,41 +115,26 @@ include '../database.php';
     </div> 
 <div class="fits">
         <lebel class="lal">Region</lebel>
-        <select id="subdistrict" name="subdistrict">
-  <?php
-    // connect to database
-    $conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+        <input class="lals" type="text"  name="subdistrict" placeholder="Enter your Address" required> 
 
-    // query for cars
-    $result = mysqli_query($conn, "SELECT * FROM sub_category");
-
-    // loop through results and create option for each car
-    while ($row = mysqli_fetch_assoc($result)) {
-      echo '<option value="' . $row["sub_category"] . '">' . $row["sub_category"] . '</option>';
-    }
-
-    // close database connection
-    mysqli_close($conn);
-  ?>
-        </select>
     </div> 
 <div class="fits">
         <lebel class="lal">Address</lebel>
-        <input type="text" name="address" placeholder="Enter your Address" required> 
+        <input class="lals" type="text" name="address" placeholder="Enter your Address" required> 
     </div> 
 <div class="fits">
         <lebel class="lal">Password</lebel>
-        <input type="password" name="password" placeholder="Enter your password" required>
+        <input class="lals" type="password" name="password" placeholder="Enter your password" required>
     </div> 
 <div class="fits">
         <lebel class="lal">Confirm Password</lebel>
-        <input type="password" name="confirmpassword" placeholder="Enter your password" required> 
+        <input class="lals" type="password" name="confirmpassword" placeholder="Enter your password" required> 
     </div> 
 <div class="fits">
         <lebel class="lal">User Name</lebel>
-        <input type="text" name="user_name" placeholder="Enter your User name" required> 
+        <input class="lals" type="text" name="user_name" placeholder="Enter your User name" required> 
     </div>  
-        <input class="but" type="submit" name="submit" value="Sign Up">
+        <input  class="but" type="submit" name="submit" value="Sign Up">
 </form>
     </div>
 </body>
