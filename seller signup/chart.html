@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chart Example</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+
+<body>
+    <canvas id="salesChart" width="400" height="200"></canvas>
+
+    <script>
+        //JavaScript code for fetching data and creating the chart
+        fetch('growthcenter.php')
+
+        .then(response => response.json())
+        .then(data => {
+            const values = data.map(entry => entry.values);
+
+            const ctx = document.getElementById('salesChart').getContext('2d');
+            const salesChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    datasets: [{
+                    lables: 'values',
+                    data: values,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            option:{
+                scales:{
+                    y:{
+                        beginAtZero: true
+                    }
+                }
+            }
+            });
+        });
+
+    </script>
+</body>
+</html>

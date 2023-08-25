@@ -56,8 +56,12 @@ while($row = $result->fetch_assoc()) {
 
 <body>
 <div class="sellerui">
-<p>pa papa p </p>
+<p>Dashboard</p>
 <?php echo "<a>ID :". $row["id"] . "  USERNAME: " . $row["user_name"]."</a>"; }?>
+
+<p><button>Growth Center</button></p>
+<p><button>Seller Support</button></p>
+<p><button>Account & Setting</button></p>
 
 </div>
 
