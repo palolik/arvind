@@ -1,5 +1,6 @@
 <?php
-// Check if the form was submitted
+
+   // Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST['id']; // Get the folder name from the form input field
 
@@ -16,9 +17,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 // Store the folder name in the database
                 include '../database.php';
-
-                // Connect to the database
-                $conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
                 // Check connection
                 if (mysqli_connect_errno()) {
@@ -56,37 +54,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
 <title>Create Folder and Upload Picture</title>
 <style>
-    .kp{ 
+     .kp{ 
       margin:0px;
       list-style-type:none;
       display:block;
-      font-size:medium;
+      font-size:15px;
       width:100px;
       color:#00203fff;
       font-size:12px;
       padding:10px; 
       width: 150px;
-      background-color: #ADEFD1FF;
-      color:midnightblue;
+      background-color: #ccc;
+      color:black;
       text-decoration:none;
       }   
       .kpa{ 
       margin:0px;
       list-style-type:none;
       display:block;
-      font-size:medium;
+      font-size:15px;
       width:100px;
       color:#00203fff;
       font-size:12px;
       padding:10px; 
       width: 150px;
-      background-color:lightseagreen;      
-      color:midnightblue;
+      background-color:#9c0000;      
+      color:#fff;
       text-decoration:none;
       }  
 
     .kp:hover{
-      background-color:aqua;
+        background-color: #c3ffe1;
+      color: black; ;
+      
       }
       .adnav{
 display: flex;
@@ -96,9 +96,10 @@ flex-direction: row;
   
 </style> 
 </head>
+<div class="iconmain"> <img src="../image//website/log.png" style="width:150px"></div>
 <body>
 <div class='adnav'><a class='kp'></a>
-<a class="kp" href="../login/home.php">Home</a>
+<a class="kp" href="../admin/login/home.php">Home</a>
 
 <a class="kp" href="../admin/productlist/productlist.php">Product List</a>
 <a class="kp" href="../admin/buyerlist/buyerlist.php">Buyer List</a>
@@ -108,7 +109,7 @@ flex-direction: row;
 <a class="kp" href="../affiliate/show.php">Affiliate List</a>
 <a class="kp" href="../admin/statistics.php">Statistics</a>
 <a class="kpa" href="folder.php">add folder</a>
-<a  href="logout.php"> <input class="kp" type="submit" name="" value="Logout" ></a>
+<a  href="login/logout.php"> <input class="kp" type="submit" name="" value="Logout" ></a>
 </div>
     <form method="post">
         <input type="text" name="foldername" placeholder="Enter folder name" />

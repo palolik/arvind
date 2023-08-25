@@ -2,8 +2,6 @@
 session_start(); 
 include '../database.php';
 
-$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
-
 if (!$conn) {
 	echo "Connection failed!";
 }
@@ -14,43 +12,53 @@ $id	=$_SESSION['id'];
 ?>
 
 
-
+<?php
+ 
+$dataPoints = array();
+$y = 40;
+for($i = 0; $i < 1000; $i++){
+	$y += rand(0, 10) - 5; 
+	array_push($dataPoints, array("x" => $i, "y" => $y));
+}
+ 
+?>
 <!DOCTYPE HTML>
 <html>
-    <title>Statistics</title>
 <head>
 <style>
     .kp{ 
       margin:0px;
       list-style-type:none;
       display:block;
-      font-size:medium;
+      font-size:15px;
       width:100px;
       color:#00203fff;
       font-size:12px;
       padding:10px; 
       width: 150px;
-      background-color: #ADEFD1FF;
-      color:midnightblue;
+      background-color: #ccc;
+      color:black;
       text-decoration:none;
       }   
       .kpa{ 
       margin:0px;
       list-style-type:none;
       display:block;
-      font-size:medium;
+      font-size:15px;
       width:100px;
       color:#00203fff;
       font-size:12px;
       padding:10px; 
       width: 150px;
-      background-color:lightseagreen;      
-      color:midnightblue;
+      background-color:#9c0000;      
+      color:#fff;
       text-decoration:none;
       }  
 
     .kp:hover{
-      background-color:aqua;
+        background-color: #c3ffe1;
+      color: black; ;
+      
       }
       .adnav{
 display: flex;
@@ -78,6 +86,7 @@ chart.render();
 }
 </script>
 </head>
+<div class="iconmain"> <img src="../image//website/log.png" style="width:150px"></div>
 <body>
 <div class='adnav'><a class='kp'></a>
  
@@ -90,69 +99,13 @@ chart.render();
 <a class="kp" href="../admin/sub_cat.php">SubCategory</a>
 <a class="kp" href="../affiliate/show.php">Affiliate List</a>
 <a class="kpa" href="statistics.php">Statistics</a>
-<a class="kp" href="../admin/folder.php">add folder</a>
+<a class="kp" href="folder.php">add folder</a>
 
-<a  href="login/logout.php"> <input class="kp" type="submit" name="" value="Logout" ></a>
+
+<a  href="../admin/login/logout.php"> <input class="kp" type="submit" name="" value="Logout" ></a>
 </div>
-
-
-
-
-<?php
-// Query to fetch data from the database
-$sql = "SELECT date, value FROM data_table ORDER BY date ASC";
-$result = $conn->query($sql);
-
-// Initialize an empty array to store the data
-$dataPoints = array();
-
-// Fetch and format the data
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $dataPoints[] = array(
-            "x" => $row['date'],
-            "y" => $row['value']
-        );
-    }
-}
-
-// Close the database connection
-$conn->close();
-?>
-
-<script src="https://www.gstatic.com/charts/loader.js"></script>
-
-<div id="lineChart" style="width: 100%; height: 400px;"></div>
-
-<script>
-// Load the Google Charts API
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawLineChart);
-
-// Function to draw the line chart
-function drawLineChart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('date', 'Date');
-    data.addColumn('number', 'Value');
-
-    // Add the data to the chart
-    data.addRows(<?php echo json_encode($dataPoints); ?>);
-
-    // Set the chart options
-    var options = {
-        title: 'Line Graph',
-        curveType: 'function',
-        legend: { position: 'bottom' }
-    };
-
-    // Create the line chart
-    var chart = new google.visualization.LineChart(document.getElementById('lineChart'));
-    chart.draw(data, options);
-}
-</script>
-
-
-
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 </body>
 </html> 
 
@@ -170,6 +123,141 @@ function drawLineChart() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics</title>
+</head>
+    <body>
+      <?php
+
+$sql = "SELECT * FROM adminup ";
+
+$sql = "SELECT * FROM adminup WHERE user_name='$user_name' AND id='$id'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+
+while($row = $result->fetch_assoc()) {
+    echo "<p>cloud id :". $row["id"] . $row["user_name"]."</p>";
+}
+
+} else {
+echo "0 results";
+}
+?>
+        <h2 align='center'>Viewer Counter</h2>
+
+                <!-- <table align='center'>
+                        <tr>
+                            <td>Pages</td>
+                            <td>Counts</td>
+                            
+                        </tr>
+                </table> -->
+
  
 
 
@@ -181,6 +269,6 @@ function drawLineChart() {
 
 
 
-    <a href="./login/logout.php"> <input type="submit" name="" value="Logout" style="background: blue; color: white; height: 35px; width: 100px; margin-top: 20px; font-size: 18px; border-radius: 5px; cursor: pointer;  "></a>
+    
     </body>
 </html>

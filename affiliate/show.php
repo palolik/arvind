@@ -1,8 +1,6 @@
 <?php
 session_start(); 
 include '../database.php';
-    
-    $conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
 if (!$conn) 
 {
@@ -30,42 +28,52 @@ $id	=$_SESSION['id'];
       margin:0px;
       list-style-type:none;
       display:block;
-      font-size:medium;
+      font-size:15px;
       width:100px;
       color:#00203fff;
       font-size:12px;
       padding:10px; 
       width: 150px;
-      background-color: #ADEFD1FF;
-      color:midnightblue;
+      background-color: #ccc;
+      color:black;
       text-decoration:none;
       }   
       .kpa{ 
       margin:0px;
       list-style-type:none;
       display:block;
-      font-size:medium;
+      font-size:15px;
       width:100px;
       color:#00203fff;
       font-size:12px;
       padding:10px; 
       width: 150px;
-      background-color:lightseagreen;      
-      color:midnightblue;
+      background-color:#9c0000;      
+      color:#fff;
       text-decoration:none;
       }  
 
     .kp:hover{
-      background-color:aqua;
+        background-color: #c3ffe1;
+      color: black; ;
+      
       }
       .adnav{
 display: flex;
 flex-direction: row;
 
       }
+      .kptp{
+   background-color:#ccc;
+   margin:5px;
+   padding:5px;
+   overflow-x: scroll;
+   width:100px
+     }
   
 </style> 
 </head>
+<div class="iconmain"> <img src="../image//website/log.png" style="width:150px"></div>
 <body>
 
 
@@ -98,18 +106,18 @@ echo "0 results";
 <a class="kpa" href="show.php">Affiliate List</a>
 <a class="kp" href="../admin/statistics.php">Statistics</a>
 <a class="kp" href="../admin/folder.php">add folder</a>
-<a  href="logout.php"> <input class="kp" type="submit" name="" value="Logout" ></a>
+<a  href="../admin/login/logout.php"> <input class="kp" type="submit" name="" value="Logout" ></a>
 </div>
 
 
 
     <center>
-        <h2>Affiliate Marketer Database</h2>
-        <a href="index.php">Upload</a>
+        <h2 >Affiliate Marketer Database</h2>
+        
     </center>
 
     <table>
-            <tr>
+            <tr class="kptp"  >
                 <td>ID</td>
                 <td>Name</td>
                 <td>E-mail Address </td>
@@ -124,15 +132,15 @@ echo "0 results";
                 <td>Confirm Password</td>
                 <td>User Name</td>
                 <td>Photo</td>
+                <td>Delete</td>
+                <td>Edit</td>
+                
 
             </tr>
     <?php
-        include '../database.php';
-            
-        $conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
-        
+
     if($conn){
-        printf("Connected successfully.");
+        
         $sql = "SELECT * FROM affiliate";
         $result = mysqli_query($conn, $sql);
         while($row = mysqli_fetch_array($result))

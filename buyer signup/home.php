@@ -14,7 +14,7 @@ $conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $dat
 <head>
 <meta charset="UTF-8">
     
-    <link rel="stylesheet" href="../css/styl15.css">
+    <link rel="stylesheet" href="../css/styl21.css">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,22 +40,21 @@ echo "0 results";
 ?> -->
 
 <?php
-    include '../header.php';
+    include '../header2.php';
 ?>
 
-    <a href="#">Your profile</a>
-    <br>
+ 
     <a href="order_tracking.php">Order Tracking</a>
-    <br>
-    <a href="#">Past Order</a>
-    <br>
-    <a href="#">Invoices</a>
-    <br>
-    <a href="#">Cart</a>
-    <br>
+  <div class="dashb">
+    <div class="dasha"><?php include 'order_tracking.php';?></div>
+   <div class="dasha">ss</div>
+   <div class="dasha">ss</div>
+   </div>
+    
     
 
-    <a href="logout.php"> <input type="submit" name="" value="Logout" style="background: blue; color: white; height: 35px; width: 100px; margin-top: 20px; font-size: 18px; border-radius: 5px; cursor: pointer;  "></a>
+    <a href="logout.php">
+     <input type="submit" name="" value="Logout" ></a>
     <br>
     <br>
 </body>

@@ -52,7 +52,6 @@ echo "0 results";
 
 <?php
     require_once("buyersignup.php");
-    $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
     
     if(isset($_POST['update'])){
         $id = mysqli_real_escape_string($mysqli, $_POST['id']);

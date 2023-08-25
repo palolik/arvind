@@ -2,8 +2,6 @@
 session_start(); 
 include '../../database.php';
 
-$conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
-
 if (!$conn) {
 	echo "Connection failed!";
 }
@@ -36,8 +34,8 @@ $id	=$_SESSION['id'];
       font-size:12px;
       padding:10px; 
       width: 150px;
-      background-color: #ADEFD1FF;
-      color:midnightblue;
+      background-color: #ccc;
+      color:black;
       text-decoration:none;
       }   
       .kpa{ 
@@ -50,22 +48,33 @@ $id	=$_SESSION['id'];
       font-size:12px;
       padding:10px; 
       width: 150px;
-      background-color:lightseagreen;      
-      color:midnightblue;
+      background-color:#9c0000;      
+      color:#fff;
       text-decoration:none;
       }  
 
     .kp:hover{
-      background-color:aqua;
+        background-color: #c3ffe1;
+      color: black; ;
       }
       .adnav{
 display: flex;
 flex-direction: row;
 
       }
+      .kptp{
+   background-color:#ccc;
+   margin:5px;
+   padding:5px;
+   overflow-x: scroll;
+   width:100px
+     }
+    
+  
   
 </style> 
 </head>
+<div class="iconmain"> <img src="../../image//website/log.png" style="width:150px"></div>
 <body>
 
 
@@ -80,7 +89,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 
 while($row = $result->fetch_assoc()) {
-    echo "<p>cloud id :". $row["id"] . $row["user_name"]."</p>";
+   
     echo "<div class='adnav'><a class='kp'>". $row["id"] . $row["user_name"]."</a>";
 }
 
@@ -99,16 +108,16 @@ echo "0 results";
 <a class="kp" href="../statistics.php">Statistics</a>
 <a class="kp" href="../folder.php">add folder</a>
 
-<a  href="logout.php"> <input class="kp" type="submit" name="" value="Logout" ></a>
+<a  href="../login/logout.php"> <input class="kp" type="submit" name="" value="Logout" ></a>
 </div>
 
     <center>
-        <h2>Uploaded images</h2>
-        <a href="index.php">Upload</a>
+        <h2 style="text-align:center">Seller List</h2>
+        
     </center>
 
-    <table>
-            <tr>
+    <table style="width:100%">
+            <tr class="kptp">
                 <td>ID</td>
                 <td>Folder name</td>
                 <td>Name</td>
@@ -122,15 +131,13 @@ echo "0 results";
                 <td>Password</td>
                 <td>Confirm Password</td>
                 <td>User Name</td>
+                <td>Delete</td>
+                <td>Edit</td>
 
             </tr>
     <?php
-            include '../../database.php';
-
-            $conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
-            
     if($conn){
-        printf("Connected successfully.");
+        
         $sql = "SELECT * FROM sellersignup";
         $result = mysqli_query($conn, $sql);
         while($row = mysqli_fetch_array($result))

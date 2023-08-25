@@ -32,8 +32,8 @@ if (!$conn) {
       font-size:12px;
       padding:10px; 
       width: 150px;
-      background-color: #ADEFD1FF;
-      color:midnightblue;
+      background-color: #ccc;
+      color:black;
       text-decoration:none;
       }   
       .kpa{ 
@@ -46,22 +46,32 @@ if (!$conn) {
       font-size:12px;
       padding:10px; 
       width: 150px;
-      background-color:lightseagreen;      
-      color:midnightblue;
+      background-color:#9c0000;      
+      color:#fff;
       text-decoration:none;
       }  
 
     .kp:hover{
-      background-color:aqua;
+        background-color: #c3ffe1;
+      color: black; ;
+      ;
       }
       .adnav{
 display: flex;
 flex-direction: row;
 
       }
+      .kptp{
+   background-color:#ccc;
+   margin:5px;
+   padding:5px;
+   overflow-x: scroll;
+   width:100px
+     }
   
 </style> 
 </head>
+<div class="iconmain"> <img src="../../image//website/log.png" style="width:150px"></div>
 <body>
 <?php
 
@@ -96,11 +106,11 @@ echo "0 results";
 
     <a  href="logout.php"> <input class="kp" type="submit" name="" value="Logout" ></a>
 </div>
-        <h2>Uploaded images</h2>
-        <a href="../login/home.php">home</a>
+        <h2 style="text-align:center">Uploaded products</h2>
+        
 
         <table>
-        <tr>
+        <tr class="kptp"   >
             <td>ID</td>
             <td>Name</td>
             <td>Specification</td>
@@ -112,15 +122,16 @@ echo "0 results";
             <td>Weight</td>
             <td>Availability</td>
             <td>Image</td>
+            <td>Delete</td>
+            <td>Edit</td>
         </tr>
     </center>
     <?php
         include '../../database.php';
 
-        $conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
         
     if($conn){
-        printf("Connected successfully.");
+        
         $sql = "SELECT * FROM productdetails";
         $result = mysqli_query($conn, $sql);
         while($row = mysqli_fetch_array($result))
