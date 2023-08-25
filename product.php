@@ -35,25 +35,26 @@
 
 
 
-    // Prepare the update statement
-    $updateStatement = $mysqli->prepare("UPDATE productdetails SET value=value+1 WHERE id=?");
-    $updateStatement->bind_param('s', $id);
-    $updateStatement->execute();
-
-    // Prepare the select statement
-    $selectStatement = $mysqli->prepare("SELECT * FROM productdetails WHERE id=?");
-    $selectStatement->bind_param('s', $id);
-    $selectStatement->execute();
-
-
-    // Get the updated value from the select statement and display it
-    $result = $selectStatement->get_result();
-    $row = $result->fetch_assoc();
-    // echo "You are visitor number " . $row['value'] . " to this website.";
-
-    // Close the prepared statements and database connection
-    $updateStatement->close();
-    $selectStatement->close();
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    
+    // Check if the current date already exists in the database
+    $today = date("Y-m-d");
+    $sql1 = "SELECT * FROM productdetails WHERE visit_date = '$today'";
+    $res = $conn->query($sql1);
+    
+    if ($res->num_rows > 0) {
+        // If the date exists, increment the visit count
+        $row = $res->fetch_assoc();
+        $newCount = $row['visit_count'] + 1;
+        $updateSql = "UPDATE productdetails SET visit_count = $newCount WHERE visit_date = '$today'";
+        $conn->query($updateSql);
+    } else {
+        // If the date doesn't exist, insert a new record
+        $insertSql = "INSERT INTO productdetails (visit_date, visit_count) VALUES ('$today', 1)";
+        $conn->query($insertSql);
+    }
     ?>
 
     <div class="promain">
