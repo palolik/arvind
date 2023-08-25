@@ -33,7 +33,7 @@ while($row = $result->fetch_assoc()) {
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/styl15.css">
+    <link rel="stylesheet" href="../css/styl21.css">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,8 +56,21 @@ while($row = $result->fetch_assoc()) {
 
 <body>
 <div class="sellerui">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> bf41870b5f08b20261f02b3174c4538dbae1bd9f
 <p>Dashboard</p>
 <?php echo "<a>ID :". $row["id"] . "  USERNAME: " . $row["user_name"]."</a>"; }?>
+=======
+<h>Welcome to Seller Account </h>
+<?php echo "<a>ID :". $row["id"].
+ "  USERNAME: " . $row["user_name"]."</a>"; ?>
+>>>>>>> 398e2ac2deb261202dcd4458f1c39e60e911f4a8
+
+<p><button>Growth Center</button></p>
+<p><button>Seller Support</button></p>
+<p><button>Account & Setting</button></p>
 
 <p><button><a href="chart.html">Growth Center</a></button></p>
 <p><button>Seller Support</button></p>

@@ -1,8 +1,66 @@
 @media screen and (min-width:451px) and (max-width: 3000px) {
+  .combox{
+    padding: 3px;
+    margin: 3px;
+  }
+  .sagol{
+    height: 350px;
+    width: 300px;
+    background-color: #fff1f1;
+    margin: 10px;
+    padding: 10px;
+  }
+.dashb{
+  display: grid;
+  grid-template-columns: 35% 35% 20%; ;
+}
+  .dasha {
+    margin:4px, 4px;
+    padding:4px;
+    background-color: rgb(255, 245, 245);
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+}
+ 
+  .ox1{
+    width: auto;
+    border-bottom: .1px solid rgb(230, 230, 230);
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+    padding: 3px;
+    margin: 3px;
+    
+    }
+  .ox12{
+    display: flex;
+    flex-direction: column;
+    border-bottom: .1px solid rgb(230, 230, 230);
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+    padding: 3px;
+    margin: 3px;
+  }
+.ox13{
+  display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+  .ox14{ 
+    padding: 10px;
+    margin: 5px;
+  }
+  .addd{
+
+    color: #ffffff;
+
+  }
+  
   .add {
-    background-color: #4CAF50; /* Green */
+    background-color:#9c0000 ;/* Green */
     border: none;
-    color: white;
+    color: #ffffff;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
@@ -14,8 +72,8 @@
   }
   
   .p11 {
-    height: 450px;
-    width: 350px;
+    height: 480px;
+    width: 400px;
     display: flex;
     flex-direction: column;
 }
@@ -27,33 +85,32 @@
   margin-bottom: 10px;
 }
 .pompom {
-    height: 350px;
-    width: 350px;
+    height: 400px;
+    width: 400px;
     background-position: center;
     background-size: cover;
 }
 
 .back-frem {
-    width: 350px;
+    width: 400px;
     height: 100px;
     background: white;
-    bottom: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
 .back-frem .back-chang {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background: wheat;
     overflow: hidden;
     cursor: pointer;
 }
 
 .back-frem .back-chang img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
 }
 
@@ -62,7 +119,8 @@
 
   .sellerui{
 width: 200px;
-height: 500px;
+text-align:center;
+height:500px;
 background-color: #1effbb;
 
 
@@ -158,7 +216,7 @@ input[type=file]::file-selector-button:hover {
   }
   .tott .a{
     padding: 10px;
-    background-color: #ebfcf7;
+    background-color: #ffdede;
     text-align: end;
     
 
@@ -169,7 +227,7 @@ input[type=file]::file-selector-button:hover {
     justify-content: space-between;
     padding: 10px;
     font-size: 16px;
-    background-color: #ebfcf7;
+    background-color: #ffe2e2;
   }
   .subc{
     display: flex;
@@ -182,7 +240,7 @@ input[type=file]::file-selector-button:hover {
     display: flex;
     width: 300px;
     font-size: 16px;
-    color: #23f8bc;
+    color: #9c0000;
 
   }
   .cartin {
@@ -199,8 +257,8 @@ input[type=file]::file-selector-button:hover {
   /* Focus styles */
   .cartin:focus {
     outline: none;
-    border-color: #4d90fe;
-    box-shadow: 0 0 5px #4d90fe;
+    border-color: #9c0000;
+    box-shadow: 0 0 5px #9c0000;
   }
   
 
@@ -214,7 +272,7 @@ input[type=file]::file-selector-button:hover {
     border-radius: 1px;
     border: none;
     color: #ffffff;
-    background-color: #23f8bc;
+    background-color: #9c0000;
     cursor: pointer;
     margin: 1px;
 
@@ -228,15 +286,13 @@ input[type=file]::file-selector-button:hover {
     border-radius: 1px;
     border: none;
     color: #ffffff;
-    background-color: #23f8bc;
+    background-color: #9c0000;
     cursor: pointer;
     margin-top: 50px;
 
   }
  
-  .butty:active {
-    background-color: #3e8e41;
-  }
+ 
   
  
   .cartitem{
@@ -453,7 +509,7 @@ cursor: pointer;
     border: none;
     height: 200px;
     width: 200px;
-    color: #ffffff; /* Set the color of the button text */
+    color: #ffffff00; /* Set the color of the button text */
     cursor: pointer;
     outline: none;}
     .middle {
@@ -601,7 +657,6 @@ cursor: pointer;
   .searchbar input {
     display: none;
       width: inherit;
-      background-color: #ffffff;
       height: 30px;
       border-color: rgb(87, 236, 164);
   }
@@ -610,15 +665,16 @@ cursor: pointer;
     grid-template-columns: 40% 60%;
 }
   .promain{
-display: grid;
-grid-template-columns: 80% 20%;
-height: -webkit-fill-available;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    height: max-content;
+    min-height: -webkit-fill-available;
 
   }
   .proside {
     display: flex;
     position: inherit;
-    background-color: #ffffff;
+    background-color: #ffffff00;
     flex-direction: column;
     align-items: flex-end;
 }

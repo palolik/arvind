@@ -1,38 +1,20 @@
+
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Sign In</title>
-  <link rel="stylesheet" href="../css/styl15.css">
-  <link rel="stylesheet" href="../css/mobb8.css">
+    <meta charset="UTF-8">
 
-  <style>
-  </style>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
 </head>
 
+<?php 
+include '../header2.php' ;
+?>
 <body>
-
-  <div class="header">
-    <div class="iconmain"> <img src="../image/website/log.png" style="width:200px"></div>
-
-  </div>
-
-
-  <div class="searchbar">
-    <form action="search.php" method="POST">
-      <input class="coco" type="text" name="search" placeholder="Search . . .">
-      <button class="popo" type="submit" name="submit-search"><img src="image/website/search.png" style="width:15px"></button>
-    </form>
-
-  </div>
-  <div class="topnav">
-    <div>
-      <a class="active" href="index.php">Home</a>
-      
-    </div>
-   
-  </div>
-  <div class="containerin">
+<div class="containerin">
     <form class="form" action="login.php" method="post">
       <h2>SIGN IN</h2>
       <?php if (isset($_GET['error'])) { ?>
@@ -51,8 +33,8 @@
     <div>don't have an account? <a href="buyersignup.php">sign up</a></div>
   </div>
 </body>
-<?php
-include '../footter2.php'
+<?php 
+include '../footter2.php' 
 ?>
-
+</html>
 </html>

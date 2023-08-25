@@ -37,7 +37,6 @@
     }
   echo "</div>";
 
-  // $cart_count variable is initialized in navigation.php
   if($cart_count>0){
 
     $cart_item->user_id=1;

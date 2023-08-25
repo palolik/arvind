@@ -6,7 +6,11 @@
     </head>
 
 <body>
+<<<<<<< HEAD
     <canvas id="salesChart" width="500" height="100"></canvas>
+=======
+    <canvas id="salesChart" width="400" height="200"></canvas>
+>>>>>>> bf41870b5f08b20261f02b3174c4538dbae1bd9f
 
     <script>
         //JavaScript code for fetching data and creating the chart
@@ -14,17 +18,27 @@
 
         .then(response => response.json())
         .then(data => {
+<<<<<<< HEAD
             const visit_date = data.map(entry => entry.visit_date);
             const visit_count = data.map(entry => entry.visit_count);
+=======
+            const values = data.map(entry => entry.values);
+>>>>>>> bf41870b5f08b20261f02b3174c4538dbae1bd9f
 
             const ctx = document.getElementById('salesChart').getContext('2d');
             const salesChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
+<<<<<<< HEAD
                     labels: visit_date,
                     datasets: [{
                     lables: 'visit_count',
                     data: visit_count,
+=======
+                    datasets: [{
+                    lables: 'values',
+                    data: values,
+>>>>>>> bf41870b5f08b20261f02b3174c4538dbae1bd9f
                     backgroundColor: 'rgba(75, 192, 192, 0.2)',
                     borderColor: 'rgba(75, 192, 192, 1)',
                     borderWidth: 1
