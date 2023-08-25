@@ -13,7 +13,7 @@ function inner_function($ratingss) {
     }
     return $stars;
   }
-            $rat = mysqli_query($mysqli, "SELECT * FROM reviews WHERE productid=$id ");
+            $rat = mysqli_query($mysqli, "SELECT * FROM reviews WHERE productid=$id");
             while ($resy = mysqli_fetch_assoc($rat)) {
 
                 echo "

@@ -4,24 +4,82 @@
     margin: 3px;
   }
   .sagol{
-    height: 350px;
-    width: 300px;
-    background-color: #fff1f1;
+    height:280px;
+    width: auto;
+    background-color: #ffffff;
     margin: 10px;
-    padding: 10px;
+    padding: 5px;
+    grid-template-columns: 50% 50%;
+    display: grid;
+    flex-direction: row;
+    border-radius: 5px;
+    border: 1px solid rgb(153, 30, 30);
+  }
+  .kom{
+    display: flex;
+    height: inherit;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .addi{
+    background-color:#9c0000 ;/* Green */
+    border: none;
+    color: #ffffff;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+   
+  }
+  .image54{
+    opacity: 1;
+    display: block;
+    width: -webkit-fill-available;
+    height: inherit;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  .pib{
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .pil{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: unset;
+    height: 30px;
+    justify-content: space-between;
+  }
+  .s{
+    font-size: 20px;
+    font-weight: bold;
+    color: #9c0000;
+  }
+  .sag{ width: auto;
+  height: inherit;}
+  .gol{ width: auto;
+    padding: 5px;
   }
 .dashb{
   display: grid;
-  grid-template-columns: 35% 35% 20%; ;
+  grid-template-columns: 40% 40% 20%; ;
 }
   .dasha {
-    margin:4px, 4px;
+    margin:4px;
     padding:4px;
     background-color: rgb(255, 245, 245);
     height: 400px;
     overflow-x: hidden;
     overflow-y: auto;
     text-align:justify;
+    box-shadow:
+      inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+      0 0 0 2px rgb(255, 255, 255),
+      0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
  
   .ox1{

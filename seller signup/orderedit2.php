@@ -34,12 +34,12 @@ $id	=$_SESSION['id'];
     require_once("../database.php");
     if(isset($_POST['update'])){
         $orderid = mysqli_real_escape_string($mysqli, $_POST['orderid']);
-        $status = mysqli_real_escape_string($mysqli, $_POST['status']);
+        $stat = mysqli_real_escape_string($mysqli, $_POST['stat']);
         $deliverydate = mysqli_real_escape_string($mysqli, $_POST['deliverydate']);
 
 
         
-        $result = mysqli_query($mysqli, "UPDATE delevery SET `status`='$status' ,  `deliverydate`='$deliverydate' WHERE `orderid`='$orderid'");
+        $result = mysqli_query($mysqli, "UPDATE delevery SET `stat`='$stat' ,  `deliverydate`='$deliverydate' WHERE `orderid`='$orderid'");
 
         echo "<a href='Pending Order.php'> View Table </a>";
 

@@ -14,7 +14,7 @@ $conn = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $dat
 <head>
 <meta charset="UTF-8">
     
-    <link rel="stylesheet" href="../css/styl21.css">
+    <link rel="stylesheet" href="../css/styl24.css">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,11 +44,19 @@ echo "0 results";
 ?>
 
  
-    <a href="order_tracking.php">Order Tracking</a>
   <div class="dashb">
-    <div class="dasha"><?php include 'order_tracking.php';?></div>
-   <div class="dasha">ss</div>
-   <div class="dasha">ss</div>
+    <div>
+        <p>Pending Review</p>
+    <div class="dasha">
+ <?php include 'order_tracking.php';?> 
+
+
+    </div>
+</div>
+   <div>        <p>Pending Delivery</p>
+<div class="dasha"><?php include 'pendingdelivery.php'; ?></div></div>
+<div>        <p>Profile Info</p>
+<div class="dasha"><?php include 'profileinfo.php'; ?></div></div>
    </div>
     
     

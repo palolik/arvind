@@ -10,7 +10,7 @@ include '../database.php';
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/styl21.css">
+    <link rel="stylesheet" href="../css/styl24.css">
     <link rel="stylesheet" href="../css/mobb12.css">
 
 

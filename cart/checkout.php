@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styl21.css">
+  <link rel="stylesheet" href="css/styl24.css">
   <title>Document</title>
 </head>
 <body>
@@ -38,7 +38,7 @@
     <input style="display:none" type="text" name="price" value= > 
     <input style="display:none" type="text" name="quan" value= > 
     <input style="display:none" type="text" name="deliverydate" value="pending"> 
-    <input style="display:none" type="text" name="status" value="pending"> 
+    <input style="display:none" type="text" name="stat" value="pending"> 
     <input type="submit" name="submittt" value="add">
 
    

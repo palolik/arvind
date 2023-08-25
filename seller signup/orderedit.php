@@ -46,7 +46,7 @@ $sellerid = $resultData['sellerid'];
 $email = $resultData['email'];
 $phone = $resultData['phone'];
 $deliverydate = $resultData['deliverydate'];
-$status = $resultData['status'];
+$stat = $resultData['stat'];
 $district = $resultData['district'];
 $subdistrict = $resultData['subdistrict'];
 $address = $resultData['address'];
@@ -72,10 +72,10 @@ $address = $resultData['address'];
         <lable>deliverydate</lable>
         <input type="text" name="deliverydate" value="<?php echo $deliverydate; ?>">
 
-        <lable>status</lable>
-        <select id="cars" name="status">
+        <lable>stat</lable>
+        <select id="cars" name="stat">
             <option value="<?php
-                            echo $status; ?>"><?php echo $status;
+                            echo $stat; ?>"><?php echo $stat;
                         ?></option>
             <option value="On Wear House">On Wear House</option>
             <option value="On the Way">On the Way</option>
