@@ -29,11 +29,11 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
         $productid = mysqli_real_escape_string($mysqli, $_POST['productid']);
         $price = mysqli_real_escape_string($mysqli, $_POST['price']);
         $deliverydate = mysqli_real_escape_string($mysqli, $_POST['deliverydate']);
-        $status = mysqli_real_escape_string($mysqli, $_POST['status']);
+        $stat = mysqli_real_escape_string($mysqli, $_POST['stat']);
 
 
 
-        $result = mysqli_query($mysqli, "INSERT INTO delevery (`cname`, `email`,`phone`,`district`,`subdistrict`,`address`,`productname`,`sellerid`,`productid`,`price`,`deliverydate`,`status`)VALUES( '$cname', '$email','$phone','$district','$subdistrict','$address','$productname','$sellerid','$productid','$price','$deliverydate','$status')");
+        $result = mysqli_query($mysqli, "INSERT INTO delevery (`cname`, `email`,`phone`,`district`,`subdistrict`,`address`,`productname`,`sellerid`,`productid`,`price`,`deliverydate`,`stat`)VALUES( '$cname', '$email','$phone','$district','$subdistrict','$address','$productname','$sellerid','$productid','$price','$deliverydate','$stat')");
 
 
     }

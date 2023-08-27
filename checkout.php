@@ -79,11 +79,11 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
         $price = mysqli_real_escape_string($mysqli, $_POST['price']);
         $quan = mysqli_real_escape_string($mysqli, $_POST['quan']);
         $deliverydate = mysqli_real_escape_string($mysqli, $_POST['deliverydate']);
-        $status = mysqli_real_escape_string($mysqli, $_POST['status']);
+        $stat = mysqli_real_escape_string($mysqli, $_POST['stat']);
 
 
 
-        $result = mysqli_query($mysqli, "INSERT INTO delevery (`cname`, `email`,`buyerid`,`phone`,`district`,`subdistrict`,`address`,`productname`,`sellerid`,`productid`,`price`,`quan`,`deliverydate`,`status`)VALUES( '$cname', '$email','$buyerid','$phone','$district','$subdistrict','$address','$productname','$sellerid','$productid','$price','$quan','$deliverydate','$status')");
+        $result = mysqli_query($mysqli, "INSERT INTO delevery (`cname`, `email`,`buyerid`,`phone`,`district`,`subdistrict`,`address`,`productname`,`sellerid`,`productid`,`price`,`quan`,`deliverydate`,`stat`)VALUES( '$cname', '$email','$buyerid','$phone','$district','$subdistrict','$address','$productname','$sellerid','$productid','$price','$quan','$deliverydate','$stat')");
    
       
  
@@ -114,7 +114,7 @@ $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $d
     <input style="display:none" type="text" name="price" value= <?php echo $total ?> > 
     <input style="display:none" type="text" name="quan" value= <?php echo $item_count ?> > 
     <input style="display:none" type="text" name="deliverydate" value="pending"> 
-    <input style="display:none" type="text" name="status" value="pending"> 
+    <input style="display:none" type="text" name="stat" value="pending"> 
     <input type="submit" name="submittt" value="add">
 
    

@@ -12,7 +12,7 @@ session_start();
 
 </head>
 
-<link rel="stylesheet" href="css/styl21.css">
+<link rel="stylesheet" href="css/styl24.css">
 <link rel="stylesheet" href="css/mobb12.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <?php
@@ -58,6 +58,7 @@ session_start();
 </div>
 <div class="topnav"><div>
   <a class="active" href="index.php">Home</a>
+  <a class="active" href="buyer signup/home.php">profile</a>
   <div class="dropdown">
     <button class="dropbtn">Catagories
       <i class="fa fa-caret-down"></i>

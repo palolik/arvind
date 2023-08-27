@@ -214,7 +214,7 @@ CREATE TABLE IF NOT EXISTS `delevery` (
   `sellerid` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `price` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `deliverydate` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `status` varchar(100) NOT NULL,
+  `stat` varchar(100) NOT NULL,
   `quan` varchar(100) NOT NULL,
   PRIMARY KEY (`orderid`)
 )  AUTO_INCREMENT=57  ;
@@ -223,7 +223,7 @@ CREATE TABLE IF NOT EXISTS `delevery` (
 -- Dumping data for table `delevery`
 --
 
-INSERT INTO `delevery` (`orderid`, `buyerid`, `cname`, `email`, `phone`, `district`, `subdistrict`, `address`, `productname`, `productid`, `sellerid`, `price`, `deliverydate`, `status`, `quan`) VALUES
+INSERT INTO `delevery` (`orderid`, `buyerid`, `cname`, `email`, `phone`, `district`, `subdistrict`, `address`, `productname`, `productid`, `sellerid`, `price`, `deliverydate`, `stat`, `quan`) VALUES
 (40, '', 'p', 'p', 'p', 'p', 'p', 'p', 'Buds', '479', '5', '350', 'pending', 'pending', '1'),
 (41, '', 's', 's', 's', 's', 's', 's', 'Buds', '479', '5', '350', 'pending', 'pending', '1'),
 (38, '', 'a', 'a', 'a', 'a', 'a', 'a', 'Buds', '479', '5', '350', 'pending', 'pending', '1'),

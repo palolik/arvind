@@ -9,10 +9,20 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="icon" type="image/x-icon" href="image/icons/favicon.ico">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
+<style>
+  .star {
+  font-size: 20px;
+  color: #ccc;
+}
 
-</head>
+.star.active {
+  color: gold;
+}
+</style>
+  </head>
 
-<link rel="stylesheet" href="../css/styl21.css">
+<link rel="stylesheet" href="../css/styl24.css">
 <link rel="stylesheet" href="../css/mobb12.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <?php

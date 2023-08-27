@@ -48,7 +48,6 @@ include './views/counter.php';
          <div class='middle'>
             <form action='product.php?' method='post'>
                  <input class='text' type='submit' value='details' name='readmore'>
- 
                 <input  type='hidden' name='id' value=" . $row['id']. ">                
             </form> 
          </div>

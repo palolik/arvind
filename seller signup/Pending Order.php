@@ -33,7 +33,7 @@ while($row = $result->fetch_assoc()) {
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/styl21.css">
+    <link rel="stylesheet" href="../css/styl24.css">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,7 +73,7 @@ while($row = $result->fetch_assoc()) {
             <th>price</th>
             <th>Quantity</th>
             <th>Delevery Date</th>
-            <th>Status</th>
+            <th>stat</th>
             <th>Action</th>
 
 
@@ -101,7 +101,7 @@ while($row = $result->fetch_assoc()) {
             echo "<td>".$row['price']."</td>";
             echo "<td>".$row['quan']."</td>";
             echo "<td>".$row['deliverydate']."</td>";
-            echo "<td>".$row['status']."</td>";
+            echo "<td>".$row['stat']."</td>";
             echo "<td><a href=\"../delete.php?orderid=$row[orderid]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a>
            <a href=\"./orderedit.php?orderid=$row[orderid]\">Edit</a></td>";
 
