@@ -35,26 +35,24 @@
 
 
 
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-    
-    // Check if the current date already exists in the database
-    $today = date("Y-m-d");
-    $sql1 = "SELECT * FROM visitor_counter WHERE visit_date = '$today'";
-    $res = $conn->query($sql1);
-    
-    if ($res->num_rows > 0) {
-        // If the date exists, increment the visit count
-        $row = $res->fetch_assoc();
-        $newCount = $row['visit_count'] + 1;
-        $updateSql = "UPDATE visitor_counter SET visit_count = $newCount WHERE visit_date = '$today'";
-        $conn->query($updateSql);
-    } else {
-        // If the date doesn't exist, insert a new record
-        $insertSql = "INSERT INTO visitor_counter (visit_date, visit_count) VALUES ('$today', 1)";
-        $conn->query($insertSql);
-    }
+    $updateStatement = $mysqli->prepare("UPDATE productdetails SET value=value+1 WHERE id=?");
+    $updateStatement->bind_param('s', $id);
+    $updateStatement->execute();
+
+    // Prepare the select statement
+    $selectStatement = $mysqli->prepare("SELECT * FROM productdetails WHERE id=?");
+    $selectStatement->bind_param('s', $id);
+    $selectStatement->execute();
+
+
+    // Get the updated value from the select statement and display it
+    $result = $selectStatement->get_result();
+    $row = $result->fetch_assoc();
+    // echo "You are visitor number " . $row['value'] . " to this website.";
+
+    // Close the prepared statements and database connection
+    $updateStatement->close();
+    $selectStatement->close();
     ?>
 
     <div class="promain">
@@ -138,33 +136,49 @@
         document.querySelector('.pompom').style.background = "url('./image/products/<?php echo $row["folder_location"]; ?>/<?php echo $row["image6"]; ?>') center center / cover";
     }
 </script>
-<?php 
-
-include 'review/showreview.php'; ?>
-<div class=commentbox>" <?php
-include 'comments/showcom.php';
-include 'comments/addcom.php' ?>
-
-</div>
 
 
+
+<!-- 
+            <?php
+
+            $cat = mysqli_query($mysqli, "SELECT * FROM comments WHERE pid=$id ");
+            while ($res = mysqli_fetch_assoc($cat)) {
+
+                echo $res['comment'] . "<br>";
+
+                echo $res['time'] . "</td><br><br>";
+            };
+
+
+            include 'comments/addcom.php';
+            ?> -->
         <?php "
+   
             ";
         }
        ?>
+
+
+
+
     </div>
+
         <div class="proside">
-            <?php     
-       $sql5 = "SELECT category
-       FROM productdetails
-       WHERE id =$id;";
-       $result3 = mysqli_query($conn, $sql5);
-       
-       // Get the category
-       $category = mysqli_fetch_assoc($result3)['category'];
-            $sql4 = "SELECT * FROM productdetails where  category=$category";
-            $result = $conn->query($sql4);
+            <?php
+            include 'database.php';
+
+            $conn = new mysqli($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+
+
+
+
+
+            $sql = "SELECT * FROM productdetails ";
+            $result = $conn->query($sql);
+
             if ($result->num_rows > 0) {
+
                 while ($row = $result->fetch_assoc()) {
                     echo
                     "<div class=cardi value='read more' name='readmore'  style=cursor: pointer;>
@@ -173,23 +187,33 @@ include 'comments/addcom.php' ?>
          <div class='middle'>
             <form action='product.php' method='post'>
                  <input class='text' type='submit' value='details' name='readmore'>
+ 
                 <input  type='hidden' name='id' value=" . $row['id'] . ">                
             </form> 
          </div>
-       </div>               
+       </div>
+                 
        <div class='details'>
                     <div class='dd'>
                         <div class=title>" . $row['name'] . "</div> 
                    <div class=price>৳" . $row['price'] . "</div>
                     </div>
-           </div></div>";
+           </div>";
                 }
             }
-            ?>      
+
+            ?>
+
+      
     </div>
         </div></div></div>
 </body>
 <?php
 include 'footter.php'
 ?>
+
+
+
+</html>
+
 </html>
