@@ -41,23 +41,7 @@ $resultg = mysqli_query($mysqli, "SELECT * FROM delevery  WHERE orderid='$idorde
     <input class="namnai" type="submit" value="submit" name="submit">
 
 </form>
-<script>
-    var stars = document.querySelectorAll("input[name='rating']");
 
-for (var i = 0; i < stars.length; i++) {
-  stars[i].addEventListener("click", function() {
-    var checked = this.checked;
-    for (var j = 0; j < stars.length; j++) {
-      stars[j].classList.remove("active");
-    }
-    if (checked) {
-      for (var j = 0; j <= i; j++) {
-        stars[j].classList.add("active");
-      }
-    }
-  });
-}
-</script>
 <?php
 }
 ?>

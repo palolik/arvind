@@ -12,8 +12,8 @@ session_start();
 
 </head>
 
-<link rel="stylesheet" href="css/styl24.css">
-<link rel="stylesheet" href="css/mobb12.css">
+<link rel="stylesheet" href="css/styl25.css">
+<link rel="stylesheet" href="css/mobb14.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <?php
 
@@ -38,11 +38,14 @@ session_start();
       $db = $database->getConnection();
 
       $sql = "SELECT * FROM buyersignup WHERE user_name='$user_name' AND id='$idd'";
-      $result = $conn->query($sql);    
-  ?>    
-<style>
+      $result = $conn->query($sql);  
+      
+      
+     
    
-</style>
+
+  ?>    
+
 <div class="header">
   <div class="iconmain"> <img src="image/website/log.png" style="width:200px"></div>
 
@@ -50,7 +53,7 @@ session_start();
 
 
 <div class="searchbar">
-<form  action="search.php" method="POST">
+<form  action="search.php" method="POST" class="guyh">
         <input class="coco" type="text" name="search" placeholder="Search . . .">
         <button class="popo" type="submit" name="submit-search"><img src="image/website/search.png" style="width:15px"></button>
     </form>
@@ -58,7 +61,6 @@ session_start();
 </div>
 <div class="topnav"><div>
   <a class="active" href="index.php">Home</a>
-  <a class="active" href="buyer signup/home.php">profile</a>
   <div class="dropdown">
     <button class="dropbtn">Catagories
       <i class="fa fa-caret-down"></i>
@@ -68,12 +70,13 @@ session_start();
 <?php $result7 = mysqli_query($mysqli, "SELECT * FROM category where parent_id=0");
   while($caty = mysqli_fetch_assoc($result7))
 
-  {
-echo "
-<a href='#'>" .$caty['category'] ." </a>
-  
-";
-  }
+{
+  $variableToPush = $caty['category'];
+
+echo "<form action='search.php?' method='post'>
+ <input  type='submit' name='variable' value='$variableToPush'>                
+</form> ";
+}
  ?>
       
     </div>
@@ -86,22 +89,19 @@ echo "
     </form>
 </div>
           <div style="display:flex">
-              <div>
-                <?php
+            <div>
+            <?php
                 // print_r( $result->num_rows);
                 if ($result->num_rows > 0) 
-                {
-                  while($row = $result->fetch_assoc()) 
-                  { ?>
-                    ID : <?= $row["id"] ?>  USERNAME: <?= $row["user_name"]?>
-                  <?php }
+                { ?>
+                  <a href="buyer signup/home.php" class="btn btn-danger">Profile</a>
+                  <?php
                 }
                 else { ?>
                   <a href="./buyer signup/loginindex.php">Sign In</a>
                   
                 <?php } ?>
-
-              </div>
+                </div>
               <div>
                   <a href="cart.php">
                                           <?php

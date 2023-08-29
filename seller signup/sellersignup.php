@@ -22,7 +22,7 @@ if (!$conn) {
  <html>
     <head>
         <title>Seller Sign up</title>
-        <link rel="stylesheet" type="text/css" href="../css/styl24.css">
+        <link rel="stylesheet" type="text/css" href="../css/styl25.css">
     </head>
 
     <body>

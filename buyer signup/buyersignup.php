@@ -10,8 +10,8 @@ include '../database.php';
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/styl24.css">
-    <link rel="stylesheet" href="../css/mobb12.css">
+    <link rel="stylesheet" href="../css/styl25.css">
+    <link rel="stylesheet" href="../css/mobb14.css">
 
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

@@ -22,8 +22,8 @@ session_start();
 </style>
   </head>
 
-<link rel="stylesheet" href="../css/styl24.css">
-<link rel="stylesheet" href="../css/mobb12.css">
+<link rel="stylesheet" href="../css/styl25.css">
+<link rel="stylesheet" href="../css/mobb14.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <?php
 
@@ -58,51 +58,43 @@ include 'database.php';
 </div>
 
 
-<div class="searchbar">
+<!-- <div class="searchbar">
 <form  action="search.php" method="POST">
         <input class="coco" type="text" name="search" placeholder="Search . . .">
         <button class="popo" type="submit" name="submit-search"><img src="../image/website/search.png" style="width:15px"></button>
     </form>
 
-</div>
+</div> -->
 <div class="topnav"><div>
-  <a class="active" href="index.php">Home</a>
+  <a class="active" href="../index.php">Home</a>
   <div class="dropdown">
     <button class="dropbtn">Catagories
       <i class="fa fa-caret-down"></i>
     </button>
     
     <div class="dropdown-content">
+    <?php $result7 = mysqli_query($mysqli, "SELECT * FROM category where parent_id=0");
+  while($caty = mysqli_fetch_assoc($result7))
 
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+{
+  $variableToPush = $caty['category'];
+
+echo "<form action='search.php?' method='post'>
+ <input  type='submit' name='variable' value='$variableToPush'>                
+</form> ";
+}
+ ?>
     </div>
   </div>
 </div>
  <div >
-  <form class="fofo" action="search.php" method="POST">
+  <form class="fofo" action="search.php" method="POST" >
         <input class="coco" type="text" name="search" placeholder="Search . . .">
         <button class="popo" type="submit" name="submit-search"><img src="../image/website/search.png" style="width:15px"></button>
     </form>
 </div>
           <div style="display:flex">
-              <div>
-                <?php
-                // print_r( $result->num_rows);
-                if ($result->num_rows > 0) 
-                {
-                  while($row = $result->fetch_assoc()) 
-                  { ?>
-                    ID : <?= $row["id"] ?>  USERNAME: <?= $row["user_name"]?>
-                  <?php }
-                }
-                else { ?>
-                  <a href="./buyer signup/loginindex.php">Sign In</a>
-                  
-                <?php } ?>
-
-              </div>
+        
               <div>
                   <a href="cart.php">
                                           <?php
@@ -111,9 +103,22 @@ include 'database.php';
                                                   $cart_item->user_id=1; //default to user iwth ID "1" for now
                                                   $cart_count = $cart_item->count();
                                               ?>
-                                              Cart <span class="badge" id="comparison-count"><?php echo $cart_count ?></span>
+                                              Cart (<span class="badge" id="comparison-count"><?php echo $cart_count ?>)</span>
                   </a>
               </div>
+              <div>
+            <?php
+                // print_r( $result->num_rows);
+                if ($result->num_rows > 0) 
+                { ?>
+                  <a href="logout.php" class="btn btn-danger">logout</a>
+                  <?php
+                }
+                else { ?>
+                  <a href="./buyer signup/loginindex.php">Sign In</a>
+                  
+                <?php } ?>
+                </div>
           </div>
  
 </div>

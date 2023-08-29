@@ -6,9 +6,17 @@
     
     <div class="dropdown-content">
 
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+	<?php $result7 = mysqli_query($mysqli, "SELECT * FROM category where parent_id=0");
+  while($caty = mysqli_fetch_assoc($result7))
+
+{
+  $variableToPush = $caty['category'];
+
+echo "<form action='search.php?' method='post' class='htun'>
+ <input  type='submit' name='variable' value='$variableToPush'>                
+</form> ";
+}
+ ?>
     </div>
   </div></div>
 	<div><a href="../index.php"><img class="ic" src="../image/icons/home.png"></a></div>
@@ -16,10 +24,19 @@
 	<div><a href="cart.php"><img class="ic" src="../image/icons/cart.png"></a>
 </div>
 
-	<div><a href="buyer signup/loginindex.php"><img class="ic" src="../image/icons/pro.png"></a></div>
+	<div> <?php
+                // print_r( $result->num_rows);
+                if ($result->num_rows > 0) 
+                { ?>
+				  <a href="buyer signup/home.php"><img class="ic" src="../image/icons/pro.png"></a>
+                  <?php
+                }
+                else { ?>
+                  <a href="loginindex.php"><img class="ic" src="../image/icons/pro.png"></a>
+                <?php } ?></div>
 </div>
 <footer>
-<link rel="stylesheet" href="styl24.css">
+<link rel="stylesheet" href="styl25.css">
 
 <div class="container1">
   	 	<div class="row1">
