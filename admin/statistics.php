@@ -86,7 +86,7 @@ chart.render();
 }
 </script>
 </head>
-<div class="iconmain"> <img src="../image//website/log1.png" style="width:150px"></div>
+<div class="iconmain"> <img src="../image//website/log copy.png" style="width:150px"></div>
 <body>
 <div class='adnav'><a class='kp'></a>
  

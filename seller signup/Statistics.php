@@ -40,7 +40,7 @@ while($row = $result->fetch_assoc()) {
     <title>Homepage</title>
 </head>
 <div class="header">
-  <div class="iconmain"> <img src="../image/website/log1.png" style="width:150px"></div>
+  <div class="iconmain"> <img src="../image/website/log copy.png" style="width:150px"></div>
   <div class="topnav">
   <?php echo "<a>ID :". $row["id"] . "  USERNAME: " . $row["user_name"]."</a>"; }?>
   <a   href="home.php">Home </a> 
