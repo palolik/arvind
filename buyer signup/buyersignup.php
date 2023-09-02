@@ -59,7 +59,7 @@ include '../database.php';
 
 <body>
 <div class="header">
-  <div class="iconmain"> <img src="../image/website/log.png" style="width:150px"></div>
+  <div class="iconmain"> <img src="../image/website/log1.png" style="width:150px"></div>
   <div class="topnav">
   <a  href="../index.php">Home</a>
   <a class="active" href="loginindex.php">Sign in</a>

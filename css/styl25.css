@@ -23,7 +23,7 @@
     align-items: center;
   }
   .addi{
-    background-color:#9c0000 ;/* Green */
+    background-color:#23f8bc ;/* Green */
     border: none;
     color: #ffffff;
     padding: 8px 16px;
@@ -57,7 +57,7 @@
   .s{
     font-size: 20px;
     font-weight: bold;
-    color: #9c0000;
+    color: #23f8bc;
   }
   .sag{ width: auto;
   height: inherit;}
@@ -69,7 +69,7 @@
   grid-template-columns: 40% 40% 20%; ;
 }
 .titlepro{
-  background-color: #9c0000;
+  background-color: #23f8bc;
   color: white;
   padding: 8px;
   margin: 4px;
@@ -122,7 +122,7 @@
   }
   
   .add {
-    background-color:#9c0000 ;/* Green */
+    background-color:#23f8bc ;/* Green */
     border: none;
     color: #ffffff;
     padding: 16px 32px;
@@ -280,7 +280,7 @@ input[type=file]::file-selector-button:hover {
   }
   .tott .a{
     padding: 10px;
-    background-color: #ffdede;
+    background-color: #c3ffe1;
     text-align: end;
     
 
@@ -291,7 +291,7 @@ input[type=file]::file-selector-button:hover {
     justify-content: space-between;
     padding: 10px;
     font-size: 16px;
-    background-color: #ffe2e2;
+    background-color: #c3ffe1;
   }
   .subc{
     display: flex;
@@ -304,7 +304,7 @@ input[type=file]::file-selector-button:hover {
     display: flex;
     width: 300px;
     font-size: 16px;
-    color: #9c0000;
+    color: #23f8bc;
 
   }
   .cartin {
@@ -321,8 +321,8 @@ input[type=file]::file-selector-button:hover {
   /* Focus styles */
   .cartin:focus {
     outline: none;
-    border-color: #9c0000;
-    box-shadow: 0 0 5px #9c0000;
+    border-color: #23f8bc;
+    box-shadow: 0 0 5px #23f8bc;
   }
   
 
@@ -336,7 +336,7 @@ input[type=file]::file-selector-button:hover {
     border-radius: 1px;
     border: none;
     color: #ffffff;
-    background-color: #9c0000;
+    background-color: #23f8bc;
     cursor: pointer;
     margin: 1px;
 
@@ -350,7 +350,7 @@ input[type=file]::file-selector-button:hover {
     border-radius: 1px;
     border: none;
     color: #ffffff;
-    background-color: #9c0000;
+    background-color: #23f8bc;
     cursor: pointer;
     margin-top: 50px;
 
@@ -407,7 +407,7 @@ input[type=file]::file-selector-button:hover {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    background-color: #9c0000;
+    background-color: #23f8bc;
     ;
     color: #fff;
     border: none;
@@ -489,7 +489,7 @@ width:100%;
 
 .popo{
 padding: 5px 10px;
-background-color: #9c0000;
+background-color: #23f8bc;
 color: white;
 border: none;
 cursor: pointer;
@@ -533,7 +533,7 @@ cursor: pointer;
         font-size: 16px;
         font-weight: bold;
         padding: 0px 3px;
-        color: #9c0000;
+        color: #23f8bc;
 
   }
 .header{
@@ -650,13 +650,13 @@ cursor: pointer;
     
     /* Change the color of links on hover */
     .topnav a:hover {
-      background-color: #9c00007a;
+      background-color: #23f8bc7a;
       color: black;
     }
     
     /* Style the "active" element to highlight the current page */
     .topnav a.active {
-      background-color: #9c0000;
+      background-color: #23f8bc;
       color: white;
     }
     
