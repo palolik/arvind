@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       font-size:12px;
       padding:10px; 
       width: 150px;
-      background-color:#9c0000;      
+      background-color:#23f8bc;      
       color:#fff;
       text-decoration:none;
       }  
@@ -96,7 +96,7 @@ flex-direction: row;
   
 </style> 
 </head>
-<div class="iconmain"> <img src="../image//website/log.png" style="width:150px"></div>
+<div class="iconmain"> <img src="../image//website/log1.png" style="width:150px"></div>
 <body>
 <div class='adnav'><a class='kp'></a>
 <a class="kp" href="../admin/login/home.php">Home</a>
