@@ -49,7 +49,7 @@
     align-items: center;
   }
   .addi{
-    background-color:#9c0000 ;/* Green */
+    background-color:#23f8bc ;/* Green */
     border: none;
     color: #ffffff;
     padding: 8px 16px;
@@ -81,7 +81,7 @@
     justify-content: space-between;
 }
 .titlepro{
-  background-color: #9c0000;
+  background-color: #23f8bc;
   color: white;
   padding: 8px;
   margin: 4px;
@@ -102,7 +102,7 @@
   width: inherit;
   font-size: 16px;
   font-weight: bold;
-  color: #9c0000;
+  color: #23f8bc;
 }
   .sag {
     width: 120px;
@@ -145,7 +145,7 @@
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    background-color: #9c0000;
+    background-color: #23f8bc;
     ;
     color: #fff;
     border: none;
@@ -210,7 +210,7 @@
     width: 100%;
     padding: 10px;
     margin-top: 10px;
-    background-color: #9c0000;
+    background-color: #23f8bc;
     ;
     color: #fff;
     border: none;
@@ -263,7 +263,7 @@
   }
   .tott .a{
     padding: 10px;
-    background-color: #ffdede;
+    background-color: #c3ffe1;
     text-align: end;
     
 
@@ -274,7 +274,7 @@
     justify-content: space-between;
     padding: 10px;
     font-size: 16px;
-    background-color: #ffe2e2;
+    background-color: #c3ffe1;
   }
   .subc{
     display: flex;
@@ -287,7 +287,7 @@
     display: flex;
     width: 300px;
     font-size: 16px;
-    color: #9c0000;
+    color: #23f8bc;
 
   }
   .cartin {
@@ -304,8 +304,8 @@
   /* Focus styles */
   .cartin:focus {
     outline: none;
-    border-color: #9c0000;
-    box-shadow: 0 0 5px #9c0000;
+    border-color: #23f8bc;
+    box-shadow: 0 0 5px #23f8bc;
   }
   
 
@@ -319,7 +319,7 @@
     border-radius: 1px;
     border: none;
     color: #ffffff;
-    background-color: #9c0000;
+    background-color: #23f8bc;
     cursor: pointer;
     margin: 1px;
 
@@ -333,7 +333,7 @@
     border-radius: 1px;
     border: none;
     color: #ffffff;
-    background-color: #9c0000;
+    background-color: #23f8bc;
     cursor: pointer;
     margin-top: 50px;
 
@@ -344,9 +344,9 @@
   
   
   .add {
-    background-color: #9c0000;
+    background-color: #23f8bc;
     border: none;
-    color: #9c0000;
+    color: #23f8bc;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -488,7 +488,7 @@ margin-bottom: 10px;
             font-size: 16px;
             font-weight: bold;
             padding: 0px 3px;
-            color: #9c0000;
+            color: #23f8bc;
     
       }
       .header {
@@ -672,7 +672,7 @@ margin-bottom: 10px;
         } */
   .popo{
     padding: 5px 10px;
-    background-color: #9c0000;
+    background-color: #23f8bc;
     color: white;
     border: none;
     cursor: pointer;

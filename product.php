@@ -35,24 +35,33 @@
 
 
 
-    $updateStatement = $mysqli->prepare("UPDATE productdetails SET value=value+1 WHERE id=?");
-    $updateStatement->bind_param('s', $id);
-    $updateStatement->execute();
-
-    // Prepare the select statement
-    $selectStatement = $mysqli->prepare("SELECT * FROM productdetails WHERE id=?");
-    $selectStatement->bind_param('s', $id);
-    $selectStatement->execute();
 
 
-    // Get the updated value from the select statement and display it
-    $result = $selectStatement->get_result();
-    $row = $result->fetch_assoc();
-    // echo "You are visitor number " . $row['value'] . " to this website.";
 
-    // Close the prepared statements and database connection
-    $updateStatement->close();
-    $selectStatement->close();
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    
+    // Check if the current date already exists in the database
+    $today = date("Y-m-d");
+    $sql1 = "SELECT * FROM product_view_count WHERE date = '$today'";
+    $res = $conn->query($sql1);
+    $id = $_POST['id'];
+
+    if ($res->num_rows > 0) {
+        // If the date exists, increment the visit count
+        $row = $res->fetch_assoc();
+        $newCount = $row['viewer_count'] + 1;
+        $updateSql = "UPDATE product_view_count SET viewer_count = $newCount WHERE date = '$today'";
+        $conn->query($updateSql);
+    } else {
+        // If the date doesn't exist, insert a new record
+        $id = $_POST['id'];
+        $insertSql = "INSERT INTO product_view_count (date, viewer_count, id) VALUES ('$today', 1, '$id')";
+        $conn->query($insertSql);
+    }
+
+      
     ?>
 
     <div class="promain">

@@ -43,7 +43,7 @@ echo "<form action='search.php?' method='post' class='htun'>
 <div class="container1">
   	 	<div class="row1">
 			<div class="footer-col">
-				<img src="./image/website/logw.png" alt="logo cc">
+				<img src="./image/website/log copy.png" alt="logo cc">
 			</div>
   	 		<div class="footer-col">
   	 			

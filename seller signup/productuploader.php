@@ -25,7 +25,7 @@ $id    = $_SESSION['id'];
     <title>Product Uploading</title>
 </head>
 <div class="header">
-    <div class="iconmain"> <img src="../image/website/log.png" style="width:150px"></div>
+    <div class="iconmain"> <img src="../image/website/log copy.png" style="width:150px"></div>
     <div class="topnav">
         <a href="home.php">Home</a>
         <a href="Product List.php">Product List</a>

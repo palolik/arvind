@@ -47,7 +47,7 @@ session_start();
   ?>    
 
 <div class="header">
-  <div class="iconmain"> <img src="image/website/log.png" style="width:200px"></div>
+  <div class="iconmain"> <img src="image/website/log copy.png" style="width:200px"></div>
 
 </div>
 

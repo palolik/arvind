@@ -48,7 +48,7 @@ $id	=$_SESSION['id'];
       font-size:12px;
       padding:10px; 
       width: 150px;
-      background-color:#9c0000;      
+      background-color:#23f8bc;      
       color:#fff;
       text-decoration:none;
       }  
@@ -73,7 +73,7 @@ flex-direction: row;
   
 </style> 
 </head>
-<div class="iconmain"> <img src="../image//website/log.png" style="width:150px"></div>
+<div class="iconmain"> <img src="../image//website/log copy.png" style="width:150px"></div>
 <body>
 
 
